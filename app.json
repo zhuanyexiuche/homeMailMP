@@ -4,7 +4,8 @@
     "pages/chat/chat",
     "pages/logs/logs",
     "pages/treeHole/treeHole",
-    "pages/fullResponse/fullResponse"
+    "pages/fullResponse/fullResponse",
+    "pages/comment/comment"
   ],
   "window": {
     "backgroundTextStyle": "dark",

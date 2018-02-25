@@ -9,7 +9,7 @@ Page({
     chatID:null,
     chatInfo:null,
     inviteText:"邀请回答",
-    addText:"添加回答"
+    addText:"写回答"
   },
 
   /**
@@ -82,14 +82,17 @@ Page({
   },
 
   addTap:function(){
-    this.setData({
-      addText:"点左边的，别点我！"
-    });
-    setTimeout(()=>{
-      this.setData({
-        addText:"添加回答"
-      });
-    },800);
+    // this.setData({
+    //   addText:"点左边的，别点我！"
+    // });
+    // setTimeout(()=>{
+    //   this.setData({
+    //     addText:"写回答"
+    //   });
+    // },800);
+    wx.navigateTo({
+      url: '../comment/comment'
+    })
   },
 
   fullResponseTap:function(e){

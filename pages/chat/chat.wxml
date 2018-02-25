@@ -3,8 +3,12 @@
   <view id = "Topic" class = "chatTopic">{{chatInfo.name}}</view>
   <view id = "TopicContext" class = "chatTopic chatTopicContext">{{chatInfo.context}}</view>
   <view class = "buttonView">
-    <button bindtap='inviteTap'>{{inviteText}}</button>
-    <button bindtap='addTap'>{{addText}}</button>
+    <button bindtap='inviteTap' class='btn'>
+      <image src="../../resource/images/plus.png" class = "imageIcon"></image>
+    {{inviteText}}</button>
+    <button bindtap='addTap' class='btn'>
+      <image src="../../resource/images/write.png" class = "imageIcon"></image>
+    {{addText}}</button>
   </view>
   <block wx:for="{{chatInfo.response}}" wx:for-item="item" wx:for-index="index" wx:key="item.id">
     <navigator id = "{{item.id}}" url='../fullResponse/fullResponse' class = "responseItem" bindtap='fullResponseTap'>

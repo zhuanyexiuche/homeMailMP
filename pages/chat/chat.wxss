@@ -8,7 +8,6 @@
 }
 .chatTopicContext{
   font-size:medium;
-  margin-bottom: 25rpx;
 }
 .responseItem{
   padding:15rpx;
@@ -17,7 +16,6 @@
 }
 .responseHead{
   font-size: medium;
-  display: flex;
 }
 .responseContent{
   font-size: medium;
@@ -28,10 +26,27 @@
   font-size:xx-small;
 }
 .buttonView{
+  background-color: #fdfdfd;
   display: flex;
 }
 .image{
   height:50rpx;
   width:50rpx;
   margin-right: 20rpx;
+}
+
+.imageIcon{
+  height:35rpx;
+  width:35rpx;
+}
+
+.btn{
+  background-color: transparent;
+  -webkit-text-fill-color: skyblue;
+  width: 85px;
+  text-align: center;
+  height: 26px;
+  font-size: 10px;
+  border-radius: 0.5em;
+  margin-bottom: 10px;
 }

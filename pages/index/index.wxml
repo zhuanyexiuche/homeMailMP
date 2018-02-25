@@ -1,4 +1,8 @@
 <!--index.wxml-->
+<!-- <view>
+  <image src='../../resource/images/头像.png' class='searchImg'></image>
+  <input placeholder='输入话题' class='qustionInput'></input>
+</view> -->
 <view class = "chatList">
   <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
     <navigator id = "{{item.id}}" url = "../chat/chat"class = "chatItem {{index==0?'firstChatItem':''}}" bindtap='itemTap'>

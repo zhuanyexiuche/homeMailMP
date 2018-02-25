@@ -1,0 +1,20 @@
+.title {
+  margin: 10px;
+  border-color: black;
+}
+
+.comment{
+  margin: 20px;
+  border-color: black;
+  height: 365px;
+}
+
+.btn{
+  background-color: transparent;
+  width: 85px;
+  text-align: center;
+  height: 26px;
+  font-size: 10px;
+  border-radius: 0.5em;
+  align-self: baseline;
+}

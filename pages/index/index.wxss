@@ -23,3 +23,12 @@
   font-size: larger;
   padding:30rpx;
 }
+
+/* .searchImg{
+  width: 10px;
+  height: 10px;
+}
+
+.questionInput{
+  margin: 20px;
+} */

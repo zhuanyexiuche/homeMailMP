@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chat/chat",
+    "pages/logs/logs",
+    "pages/treeHole/treeHole",
+    "pages/fullResponse/fullResponse"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "来聊",
+    "enablePullDownRefresh": true,
+    "backgroundColor":"#eeeeee"
+  },
+  "tabBar": {
+    "color": "#e0e0e0",
+    "selectedColor": "#28d228",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "来聊",
+        "iconPath": "resource/images/wechat.png",
+        "selectedIconPath": "resource/images/wechatHL.png"
+      },
+      {
+        "pagePath": "pages/treeHole/treeHole",
+        "text": "树洞",
+        "iconPath": "resource/images/icon_component.png",
+        "selectedIconPath": "resource/images/icon_component_HL.png"
+      }
+    ]
+  }
+}

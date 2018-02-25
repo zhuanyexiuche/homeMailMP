@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class = "chatList">
+  <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
+    <navigator id = "{{item.id}}" url = "../chat/chat"class = "chatItem {{index==0?'firstChatItem':''}}" bindtap='itemTap'>
+      <view class = "chatItemTitle">
+        {{item.name}}
+      </view>
+      <view class = "chatItemText">
+        <view class = "chatItemText">
+          回复量：{{item.responseCount}}
+        </view>
+        <view class = "chatItemText">
+          热度：{{item.heat}}
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>

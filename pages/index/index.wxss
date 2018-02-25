@@ -1,0 +1,25 @@
+/**index.wxss**/
+@import '../common/weui.wxss';
+.chatList{
+  background-color: #e0e0e0;
+  height:auto;
+}
+.chatItem{
+  background-color:#fefefe;
+  margin: 20rpx;
+  border-radius: 6rpx;
+}
+.firstChatItem{
+  margin-top:0rpx; 
+}
+.chatItemText{
+  text-align: center;
+  font-size: smaller;
+  display: flex;
+  padding:15rpx;
+  flex:1;
+}
+.chatItemTitle{
+  font-size: larger;
+  padding:30rpx;
+}

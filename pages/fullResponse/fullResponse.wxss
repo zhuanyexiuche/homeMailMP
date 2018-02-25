@@ -1,0 +1,7 @@
+/* pages/fullResponse/fullResponse.wxss */
+@import "../index/index.wxss";
+@import "../common/weui.wxss";
+@import "../chat/chat.wxss";
+.fullresponseContent{
+  padding:30rpx; 
+}

@@ -1,0 +1,37 @@
+/* pages/chat/chat.wxss */
+@import "../index/index.wxss";
+@import "../common/weui.wxss";
+.chatTopic{
+  background-color: #fdfdfd;
+  padding: 20rpx;
+  font-size:larger;
+}
+.chatTopicContext{
+  font-size:medium;
+  margin-bottom: 25rpx;
+}
+.responseItem{
+  padding:15rpx;
+  margin-top:15rpx;
+  background-color:#fdfdfd;
+}
+.responseHead{
+  font-size: medium;
+  display: flex;
+}
+.responseContent{
+  font-size: medium;
+  padding-top:5rpx;
+  padding-bottom: 5rpx;
+}
+.responseBottom{
+  font-size:xx-small;
+}
+.buttonView{
+  display: flex;
+}
+.image{
+  height:50rpx;
+  width:50rpx;
+  margin-right: 20rpx;
+}

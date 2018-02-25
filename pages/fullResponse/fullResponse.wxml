@@ -1,0 +1,14 @@
+<!--pages/fullResponse/fullResponse.wxml-->
+<view class = "chatList">
+  <view class = "chatTopic">{{topic}}</view>
+  <view class = "chatTopic chatTopicContext">{{context}}</view>
+  <view class = "responseItem">
+    <view class = "responseHead">
+      <image src="../../resource/images/头像.png" class = "image"></image>
+      <view>{{response.userName}}:</view>
+    </view>
+    <view class = "responseContent fullresponseContent">
+      {{response.content}}
+    </view>
+  </view>
+</view>

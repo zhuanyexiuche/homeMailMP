@@ -37,6 +37,8 @@ App({
     userInfo: null,
     chatID:null,
     responseID:null,
-    chatList: [{ id: "0", name: "大学生撸猫正确姿势", context: "如题", response: [{ id: "0", userName: "哆啦A梦", content: "巴拉巴拉巴拉拉拉小魔仙变变变身啦！巴拉巴拉巴拉拉拉小魔仙变变变身啦！巴拉巴拉巴拉拉拉小魔仙变变变身啦！巴拉巴拉巴拉拉拉小魔仙变变变身啦！", briefContent: "巴拉巴拉...", clap: 20 }, { id: "1", userName: "哆啦B梦", content: "楼上小仙女说的对呀", briefContent: "楼上小仙女...", clap: 10 }, { id: "2", userName: "哆啦C梦", content: "楼上说楼上小仙女说得对呀说的对呀", briefContent: "楼上说...", clap: 30 }], responseCount: 10, heat: 15 }, { id: "1", name: "萌新初到，请问需要注意些什么", context: "如题", response: [{ id: "3", userName: "哆啦A梦", content: "巴拉巴拉巴拉拉拉小魔仙变变变身啦！", briefContent: "巴拉巴拉...", clap: 20 }, { id: "4", userName: "哆啦B梦", content: "楼上小仙女说的对呀", briefContent: "楼上小仙女...", clap: 10 }, { id: "5", userName: "哆啦C梦", content: "楼上说楼上小仙女说得对呀说的对呀", briefContent: "楼上说...", clap: 30 }], responseCount: 50, heat: 30 }, { id: "2", name: "这个辣鸡小程序是谁做的？", context: "如题", response: [{ id: "6", userName: "哆啦A梦", content: "巴拉巴拉巴拉拉拉小魔仙变变变身啦！", briefContent: "巴拉巴拉...", clap: 20 }, { id: "7", userName: "哆啦B梦", content: "楼上小仙女说的对呀", briefContent: "楼上小仙女...", clap: 10 }, { id: "8", userName: "哆啦C梦", content: "楼上说楼上小仙女说得对呀说的对呀", briefContent: "楼上说...", clap: 30 }], responseCount: "19800", heat: 600 }, { id: "3", name: "口红色号如何辨识", context: "如题", response: [{ id: "9", userName: "哆啦A梦", content: "巴拉巴拉巴拉拉拉小魔仙变变变身啦！", briefContent: "巴拉巴拉...", clap: 20 }, { id: "10", userName: "哆啦B梦", content: "楼上小仙女说的对呀", briefContent: "楼上小仙女...", clap: 10 }, { id: "11", userName: "哆啦C梦", content: "楼上说楼上小仙女说得对呀说的对呀", briefContent: "楼上说...", clap: 30 }], responseCount: "20000", heat: 100000 }]
+    topic:null,
+    context:null,
+    serverUrl:'47.100.32.199:8080/HomeMail_war'
   }
 })

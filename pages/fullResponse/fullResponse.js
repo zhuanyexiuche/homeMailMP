@@ -1,4 +1,5 @@
 // pages/fullResponse/fullResponse.js
+const app = getApp();
 Page({
 
   /**
@@ -14,20 +15,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
     this.setData({
-      topic:getApp().globalData.chatList[getApp().globalData.chatID].name,
-      context: getApp().globalData.chatList[getApp().globalData.chatID].context
+      topic:app.globalData.topic,
+      context:app.globalData.context
     });
-    for(let temp of getApp().globalData.chatList){
-      for (let resp of temp.response){
-        if (resp.id===getApp().globalData.responseID){
-          this.setData({
-            response:resp
-          });
-          return;
-        }
+    wx.request({
+      url: 'http://'+app.globalData.serverUrl+'/getResponse',
+      data:{
+        brief:false,
+        RID:app.globalData.responseID
+      },
+      success:function(res){
+        that.setData({
+          response:res.data
+        });
+      },
+      fail:function(reason){
+        console.log(reason);
       }
-    }
+    })
   },
 
   /**

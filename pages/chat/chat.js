@@ -8,6 +8,7 @@ Page({
   data: {
     chatID:null,
     chatInfo:null,
+    respInfo:null,
     inviteText:"邀请回答",
     addText:"写回答"
   },
@@ -16,9 +17,42 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
     this.setData({
       chatID:app.globalData.chatID,
-      chatInfo:app.globalData.chatList[app.globalData.chatID]
+    });
+    wx.request({
+      url: 'http://'+app.globalData.serverUrl+'/getQuestion',
+      data:{
+        brief:false,
+        QID:app.globalData.chatID
+      },
+      success:function(res){
+        that.setData({
+          chatInfo:res.data
+        });
+        app.globalData.context = res.data.context;
+        app.globalData.topic = res.data.topic;
+      },
+      fail:function(reason){
+        console.log(reason);
+      }
+    });
+    wx.request({
+      url: 'http://'+app.globalData.serverUrl+'/getResponse',
+      data:{
+        brief:true,
+        QID:app.globalData.chatID
+      },
+      success:function(res){
+        console.log(res.data);
+        that.setData({
+          respInfo:res.data
+        });
+      },
+      fail:function(reason){
+        console.log(reason);
+      }
     });
   },
 

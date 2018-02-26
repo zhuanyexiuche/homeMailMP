@@ -1,6 +1,6 @@
 <!--pages/chat/chat.wxml-->
 <view class = "chatList">
-  <view id = "Topic" class = "chatTopic">{{chatInfo.name}}</view>
+  <view id = "Topic" class = "chatTopic">{{chatInfo.topic}}</view>
   <view id = "TopicContext" class = "chatTopic chatTopicContext">{{chatInfo.context}}</view>
   <view class = "buttonView">
     <button bindtap='inviteTap' class='btn'>
@@ -10,14 +10,14 @@
       <image src="../../resource/images/write.png" class = "imageIcon"></image>
     {{addText}}</button>
   </view>
-  <block wx:for="{{chatInfo.response}}" wx:for-item="item" wx:for-index="index" wx:key="item.id">
-    <navigator id = "{{item.id}}" url='../fullResponse/fullResponse' class = "responseItem" bindtap='fullResponseTap'>
+  <block wx:for="{{respInfo}}" wx:for-item="item" wx:for-index="index" wx:key="item.ID">
+    <navigator id = "{{item.ID}}" url='../fullResponse/fullResponse' class = "responseItem" bindtap='fullResponseTap'>
       <view class = "responseHead">
         <image src="../../resource/images/头像.png" class = "image"></image>
-        <view>{{item.userName}}:</view>
+        <view>{{item.WXID}}:</view>
       </view>
       <view class = "responseContent">{{item.briefContent}}</view>
-      <view class = "responseBottom">{{item.clap}}赞同</view>
+      <view class = "responseBottom">{{item.clapCount}}赞同</view>
     </navigator>
   </block>
 </view>

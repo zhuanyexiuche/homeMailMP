@@ -4,17 +4,17 @@
   <input placeholder='输入话题' class='qustionInput'></input>
 </view> -->
 <view class = "chatList">
-  <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
-    <navigator id = "{{item.id}}" url = "../chat/chat"class = "chatItem {{index==0?'firstChatItem':''}}" bindtap='itemTap'>
+  <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
+    <navigator id = "{{item.ID}}" url = "../chat/chat"class = "chatItem {{index==0?'firstChatItem':''}}" bindtap='itemTap'>
       <view class = "chatItemTitle">
-        {{item.name}}
+        {{item.topic}}
       </view>
       <view class = "chatItemText">
         <view class = "chatItemText">
-          回复量：{{item.responseCount}}
+          回复量：{{item.respCount}}
         </view>
         <view class = "chatItemText">
-          热度：{{item.heat}}
+          点赞量：{{item.clapCount}}
         </view>
       </view>
     </navigator>

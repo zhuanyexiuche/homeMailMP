@@ -21,7 +21,7 @@ Page({
       context:app.globalData.context
     });
     wx.request({
-      url: 'http://'+app.globalData.serverUrl+'/getResponse',
+      url: app.globalData.serverUrl+'/getResponse',
       data:{
         brief:false,
         RID:app.globalData.responseID

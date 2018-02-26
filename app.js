@@ -39,6 +39,6 @@ App({
     responseID:null,
     topic:null,
     context:null,
-    serverUrl:'47.100.32.199:8080/HomeMail_war'
+    serverUrl:'https://jjmfly.com/HomeMail_war'
   }
 })

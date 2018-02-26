@@ -22,7 +22,7 @@ Page({
       chatID:app.globalData.chatID,
     });
     wx.request({
-      url: 'http://'+app.globalData.serverUrl+'/getQuestion',
+      url: app.globalData.serverUrl+'/getQuestion',
       data:{
         brief:false,
         QID:app.globalData.chatID
@@ -39,7 +39,7 @@ Page({
       }
     });
     wx.request({
-      url: 'http://'+app.globalData.serverUrl+'/getResponse',
+      url: app.globalData.serverUrl+'/getResponse',
       data:{
         brief:true,
         QID:app.globalData.chatID

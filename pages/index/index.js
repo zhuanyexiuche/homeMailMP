@@ -9,7 +9,7 @@ Page({
   onLoad: function () {
     let that = this;
     wx.request({
-      url: 'http://'+app.globalData.serverUrl+'/getQuestion',
+      url: app.globalData.serverUrl+'/getQuestion',
       data:{
         brief:true
       },

@@ -5,3 +5,11 @@
 .fullresponseContent{
   padding:30rpx; 
 }
+.support{
+  margin-left: 85%;
+  width: 42px;
+  height: 25px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 12px;
+}

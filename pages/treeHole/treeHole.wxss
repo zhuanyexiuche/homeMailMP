@@ -1,1 +1,41 @@
 /* pages/treeHole/treeHole.wxss */
+.title{
+  width: 100%;
+  height: 100%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.treeHoleList{
+  background-color: white;
+  height:auto;
+}
+
+.content_blue{
+  background-color: rgba(135, 206, 235, 0.3);
+  margin: 10px;
+  border-radius: 6px;
+  height: 45px;
+}
+
+.content_yellow{
+  background-color: rgba(255, 234, 214, 0.6);
+  margin: 10px;
+  border-radius: 6px;
+  height: 45px;
+}
+
+.imageIcon{
+  height:25rpx;
+  width:30rpx;
+  margin-bottom: 15px;
+  margin-left: -5px;
+}
+
+.change{
+  height:45rpx;
+  width:50rpx;
+  margin-left: 85%;
+  background-color: transparent;
+}

@@ -11,10 +11,9 @@
 
 .btn{
   background-color: transparent;
-  width: 85px;
+  width: 95px;
   text-align: center;
-  height: 26px;
-  font-size: 10px;
-  border-radius: 0.5em;
+  height: 32px;
+  font-size: 14px;
   align-self: baseline;
 }

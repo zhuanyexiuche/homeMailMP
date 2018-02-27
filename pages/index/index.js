@@ -9,7 +9,7 @@ Page({
   onLoad: function () {
     let that = this;
     wx.request({
-      url: app.globalData.serverUrl+'/getQuestion',
+      url: app.globalData.serverUrl+'/readQuestion',
       data:{
         brief:true
       },
@@ -23,6 +23,9 @@ Page({
         console.log(reason);
       }
     })
+  },
+  onShow:function(){
+    this.onLoad();
   },
   itemTap:function(e){
     app.globalData.chatID=e.currentTarget.id;

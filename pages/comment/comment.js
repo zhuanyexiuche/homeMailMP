@@ -63,5 +63,37 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  confirm:function(e){
+    console.log('confirm');
+    wx.createSelectorQuery().select('#text').fields({
+      properties:['value']
+    },function(res){
+      console.log(res.value);
+      console.log(app.globalData.userInfo);
+      
+      wx.request({
+        url: app.globalData.serverUrl+'/writeResponse',
+        data:{
+          aim:"add",
+          QID:app.globalData.chatID,
+          WXID:app.globalData.userInfo.nickName,
+          text:res.value
+        },
+        success:function(res){
+          console.log(res);
+          if (res.data=='success'){
+            console.log(res);
+            wx.navigateBack();
+          }else{
+            console.log("数据库访问出错");
+          }
+        },
+        fail:function(reason){
+          console.log(reason);
+        }
+      })
+    }).exec();
   }
 })

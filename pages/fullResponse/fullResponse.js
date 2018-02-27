@@ -21,7 +21,7 @@ Page({
       context:app.globalData.context
     });
     wx.request({
-      url: app.globalData.serverUrl+'/getResponse',
+      url: app.globalData.serverUrl+'/readResponse',
       data:{
         brief:false,
         RID:app.globalData.responseID
@@ -85,4 +85,25 @@ Page({
   onShareAppMessage: function () {
   
   },
+
+  supportTap:function(e){
+    wx.request({
+      url: app.globalData.serverUrl+'/writeResponse',
+      data:{
+        aim:"clap",
+        RID:app.globalData.responseID
+      },
+      success:function(res){
+        if (res.data==='success'){
+
+        }else{
+          console.log("数据库访问出错");
+        }
+      },
+      fail:function(reason){
+        console.log(reason);
+        console.log("网络通讯出错");
+      }
+    })
+  }
 })

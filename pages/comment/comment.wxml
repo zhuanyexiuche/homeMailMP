@@ -1,5 +1,5 @@
 <view>
   <input placeholder='标题' class='title'></input>
-  <textarea placeholder='回答...' class='comment'></textarea>
+  <textarea id = "text" placeholder='回答...' class='comment'></textarea>
   <button bindtap='confirm' class='btn'>{{confirmText}}</button>
 </view>

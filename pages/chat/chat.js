@@ -22,7 +22,7 @@ Page({
       chatID:app.globalData.chatID,
     });
     wx.request({
-      url: app.globalData.serverUrl+'/getQuestion',
+      url: app.globalData.serverUrl+'/readQuestion',
       data:{
         brief:false,
         QID:app.globalData.chatID
@@ -39,7 +39,7 @@ Page({
       }
     });
     wx.request({
-      url: app.globalData.serverUrl+'/getResponse',
+      url: app.globalData.serverUrl+'/readResponse',
       data:{
         brief:true,
         QID:app.globalData.chatID
@@ -66,7 +66,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.onLoad();
   },
 
   /**

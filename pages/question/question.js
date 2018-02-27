@@ -1,5 +1,5 @@
 // pages/question/question.js
-
+const app = getApp();
 Page({
 
   /**
@@ -63,5 +63,31 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  confirm:function(e){
+    wx.createSelectorQuery().select('#text').fields({
+      properties: ['value']
+    }, function (res) {
+      console.log(res.value);
+      wx.createSelectorQuery().select('#topic').fields({
+        properties:['value']
+      },function(res2){
+        console.log(res2.value);
+        wx.request({
+          url: app.globalData.serverUrl+'/writeQuestion',
+          data:{
+            topic:res2.value,
+            context:res.value
+          },
+          success:function(res){
+            wx.navigateBack();
+          },
+          fail:function(reason){
+            console.log(reason);
+          }
+        })
+      }).exec();
+    }).exec();
   }
 })

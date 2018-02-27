@@ -24,11 +24,39 @@
   padding:30rpx;
 }
 
-/* .searchImg{
-  width: 10px;
-  height: 10px;
+.imageIcon{
+  height:30rpx;
+  width:30rpx;
+}
+
+.search{
+  height: 32px;
+  display: flex;
+}
+
+.qAndSBtn{
+  width: 100%;
+  height: 32px;
+  background-color: transparent;
+  -webkit-text-fill-color: skyblue;
+  font-size: 13px;
+  display: inline-block;
 }
 
 .questionInput{
-  margin: 20px;
-} */
+  height: 32px;
+  margin-left: 10px;
+}
+
+.inputQView{
+  width: 70%;
+  border:  2px solid rgba(128, 128, 128, 0.5);
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.btnView{
+  width: 110px;
+  display: flex;
+}

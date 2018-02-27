@@ -1,0 +1,19 @@
+.title {
+  margin: 10px;
+  border-color: black;
+}
+
+.detail{
+  margin: 20px;
+  border-color: black;
+  height: 365px;
+}
+
+.btn{
+  background-color: transparent;
+  width: 95px;
+  text-align: center;
+  height: 32px;
+  font-size: 14px;
+  align-self: baseline;
+}

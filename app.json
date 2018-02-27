@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/treeHole/treeHole",
     "pages/fullResponse/fullResponse",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/question/question"
   ],
   "window": {
     "backgroundTextStyle": "dark",

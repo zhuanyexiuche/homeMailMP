@@ -30,6 +30,10 @@ Page({
   itemTap:function(e){
     app.globalData.chatID=e.currentTarget.id;
     console.log(app.globalData.chatID);
-    
+  },
+  addQTap:function(e){
+    wx.navigateTo({
+      url: '../question/question'
+    })
   }
 })

@@ -1,0 +1,5 @@
+<view>
+  <input placeholder='标题' class='title'></input>
+  <textarea placeholder='问题详情...' class='detail'></textarea>
+  <button bindtap='confirm' class='btn'>{{confirmText}}</button>
+</view>

@@ -5,7 +5,7 @@
   <view class = "responseItem">
     <view class = "responseHead">
       <image src="../../resource/images/头像.png" class = "image"></image>
-      <text>{{response.userName}}:</text>
+      <text>{{response.WXID}}:</text>
       <button bindtap='supportTap' class='support'>👍</button>
     </view>
     <view class = "responseContent fullresponseContent">

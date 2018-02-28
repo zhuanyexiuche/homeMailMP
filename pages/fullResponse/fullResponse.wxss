@@ -5,14 +5,34 @@
 .fullresponseContent{
   padding:30rpx; 
 }
+
+.buttonView{
+  display: flex;
+  width: 127px;
+  margin-left: 60%;
+}
+
+.delete{
+  display: none;
+}
+
+.deleted{
+  width: 75px;
+  height: 25px;
+  font-size: 12px;
+  -webkit-text-fill-color: grey;
+  background-color: transparent;
+}
+
 .support{
-  margin-left: 85%;
   width: 42px;
   height: 25px;
+  -webkit-text-fill-color: grey;
   background-color: transparent;
   text-align: center;
   font-size: 12px;
 }
 .supported{
-  background-color: grey;
+  -webkit-text-fill-color: white;
+  background-color: rgba(128, 128, 128, 0.5);
 }

@@ -111,9 +111,9 @@ Page({
         WXID:app.globalData.userInfo.nickName
       },
       success:function(res){
-        if (res.data==='success'){
+        if (res.data!='fail'){
           that.setData({
-            supported:this.data.supported==false
+            supported:that.data.supported==false
           });
         }else{
           console.log("数据库访问出错");

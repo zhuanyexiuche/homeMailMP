@@ -13,11 +13,6 @@
   text-align: center;
   font-size: 12px;
 }
-.support{
-  margin-left: 85%;
-  width: 42px;
-  height: 25px;
+.supported{
   background-color: grey;
-  text-align: center;
-  font-size: 12px;
 }

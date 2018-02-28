@@ -10,7 +10,6 @@ Page({
     context:null,
     response:null,
     supported:null,
-    disabled: false
   },
 
   /**
@@ -105,9 +104,6 @@ Page({
 
   supportTap:function(e){
     let that = this;
-    this.setData({
-      disabled: !this.data.disabled
-    })
     wx.request({
       url: app.globalData.serverUrl+'/writeClap',
       data:{

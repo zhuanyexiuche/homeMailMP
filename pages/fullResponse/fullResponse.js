@@ -8,7 +8,8 @@ Page({
   data: {
     topic:null,
     context:null,
-    response:null
+    response:null,
+    supported:null
   },
 
   /**
@@ -29,6 +30,21 @@ Page({
       success:function(res){
         that.setData({
           response:res.data
+        });
+      },
+      fail:function(reason){
+        console.log(reason);
+      }
+    });
+    wx.request({
+      url: app.globalData.serverUrl+'/readClap',
+      data:{
+        RID:app.globalData.responseID,
+        WXID: app.globalData.userInfo.nickName
+      },
+      success:function(res){
+        that.setData({
+          supported:res.data==='true'
         });
       },
       fail:function(reason){
@@ -87,15 +103,18 @@ Page({
   },
 
   supportTap:function(e){
+    let that = this;
     wx.request({
-      url: app.globalData.serverUrl+'/writeResponse',
+      url: app.globalData.serverUrl+'/writeClap',
       data:{
-        aim:"clap",
-        RID:app.globalData.responseID
+        RID:app.globalData.responseID,
+        WXID:app.globalData.userInfo.nickName
       },
       success:function(res){
         if (res.data==='success'){
-
+          that.setData({
+            supported:this.data.supported==false
+          });
         }else{
           console.log("数据库访问出错");
         }

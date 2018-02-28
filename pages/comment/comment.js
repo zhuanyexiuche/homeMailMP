@@ -76,7 +76,6 @@ Page({
       wx.request({
         url: app.globalData.serverUrl+'/writeResponse',
         data:{
-          aim:"add",
           QID:app.globalData.chatID,
           WXID:app.globalData.userInfo.nickName,
           text:res.value

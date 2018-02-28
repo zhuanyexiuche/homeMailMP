@@ -22,6 +22,7 @@
   font-size: 12px;
   -webkit-text-fill-color: grey;
   background-color: transparent;
+  display:unset;
 }
 
 .support{

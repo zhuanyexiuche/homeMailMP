@@ -10,6 +10,7 @@ Page({
     context:null,
     response:null,
     supported:null,
+    belongToMe:null
   },
 
   /**
@@ -29,7 +30,8 @@ Page({
       },
       success:function(res){
         that.setData({
-          response:res.data
+          response:res.data,
+          belongToMe:(res.data.WXID===app.globalData.userInfo.nickName)
         });
       },
       fail:function(reason){
@@ -43,8 +45,9 @@ Page({
         WXID: app.globalData.userInfo.nickName
       },
       success:function(res){
+        console.log(res.data);
         that.setData({
-          supported:res.data==='true'
+          supported:res.data
         });
       },
       fail:function(reason){
@@ -122,6 +125,22 @@ Page({
       fail:function(reason){
         console.log(reason);
         console.log("网络通讯出错");
+      }
+    })
+  },
+
+  deleteTap:function(e){
+    wx.request({
+      url: app.globalData.serverUrl+'/writeResponse',
+      data:{
+        delete:true,
+        RID:app.globalData.responseID
+      },
+      success:function(res){
+        wx.navigateBack();
+      },
+      fail:function(reason){
+        console.log(reason);
       }
     })
   }

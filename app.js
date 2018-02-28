@@ -39,6 +39,6 @@ App({
     responseID:null,
     topic:null,
     context:null,
-    serverUrl:false?'http://localhost/HomeMail_war':'https://jjmfly.com/HomeMail_war'
+    serverUrl:false?'http://localhost':'https://jjmfly.com/HomeMail_war'
   }
 })

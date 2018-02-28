@@ -8,7 +8,7 @@
       <text>{{response.WXID}}:</text>
       <view class='buttonView'>
         <button bindtap='supportTap' class="support {{supported?'supported':''}}">赞</button>
-        <button class="delete {{belongToMe?'deleted':''}}">删除</button>
+        <button bindtap='deleteTap' class="delete {{belongToMe?'deleted':''}}">删除</button>
       </view>
     </view>
     <view class = "responseContent fullresponseContent">

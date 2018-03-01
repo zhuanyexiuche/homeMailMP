@@ -1,11 +1,11 @@
 <!--index.wxml-->
   <view class='search'>
     <view class='inputQView'>
-      <input placeholder='输入话题' class='qustionInput'>
+      <input id = "search" placeholder='输入话题' class='qustionInput'>
       </input>
     </view>
     <view class='btnView'>
-      <button class='qAndSBtn'>
+      <button class='qAndSBtn' bindtap='searchTap'>
         <image src="../../resource/images/search.png" class = "imageIcon"></image>
       </button>
       <button class='qAndSBtn' bindtap='addQTap'>

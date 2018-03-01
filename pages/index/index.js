@@ -7,6 +7,30 @@ Page({
     chatList:[]
   },
   getQuestion:function(success){
+    let that = this;
+    wx.createSelectorQuery().select('#search').fields({
+      properties: ['value']
+    }, function (res) {
+      console.log(res.value);
+      wx.request({
+        url: app.globalData.serverUrl + '/readQuestion',
+        data: {
+          brief: true,
+          search: true,
+          keyWord: res.value
+        },
+        success: function (res) {
+          that.setData({
+            chatList: res.data
+          });
+        },
+        fail: function (reason) {
+          console.log(reason);
+        }
+      })
+    }).exec();
+  },
+  getQuestion2:function(success){
     let suc = success;
     let that = this;
     wx.request({
@@ -38,7 +62,6 @@ Page({
     this.getQuestion();
   },
   onPullDownRefresh:function(){
-    
     setTimeout(this.temp,200);
   },
   itemTap:function(e){
@@ -49,5 +72,29 @@ Page({
     wx.navigateTo({
       url: '../question/question'
     })
+  },
+  searchTap:function(e){
+    let that = this;
+    wx.createSelectorQuery().select('#search').fields({
+      properties: ['value']
+    }, function (res) {
+      console.log(res.value);
+      wx.request({
+        url: app.globalData.serverUrl+'/readQuestion',
+        data:{
+          brief:true,
+          search:true,
+          keyWord:res.value
+        },
+        success:function(res){
+          that.setData({
+            chatList:res.data
+          });
+        },
+        fail:function(reason){
+          console.log(reason);
+        }
+      })
+    }).exec();
   }
 })

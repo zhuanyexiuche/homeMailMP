@@ -52,11 +52,13 @@ Page({
       }
     });
   },
+  temp:function(){
+    this.refresh(wx.stopPullDownRefresh());
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
     this.setData({
       chatID:app.globalData.chatID,
     });
@@ -73,7 +75,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.onLoad();
+    this.refresh();
   },
 
   /**
@@ -94,7 +96,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.refresh(wx.stopPullDownRefresh());
+    setTimeout(this.temp,200);
   },
 
   /**

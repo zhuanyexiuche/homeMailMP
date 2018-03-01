@@ -81,7 +81,7 @@ Page({
           nickName:app.globalData.userInfo.nickName,
           text:res.value,
           avatarUrl:app.globalData.userInfo.avatarUrl
-        },
+        }, 
         success:function(res){
           console.log(res);
           if (res.data=='success'){

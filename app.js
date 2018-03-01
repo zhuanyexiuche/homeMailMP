@@ -6,7 +6,7 @@ App({
     responseID: null,
     topic: null,
     context: null,
-    serverUrl: true ? 'http://localhost' : 'https://jjmfly.com/HomeMail_war',
+    serverUrl: false ? 'http://localhost' : 'https://jjmfly.com/HomeMail_war',
     loginStatus: true,
     code:null,
     open_id:null,

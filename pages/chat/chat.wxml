@@ -13,7 +13,7 @@
   <block wx:for="{{respInfo}}" wx:for-item="item" wx:for-index="index" wx:key="item.ID">
     <navigator id = "{{item.ID}}" url='../fullResponse/fullResponse' class = "responseItem" bindtap='fullResponseTap'>
       <view class = "responseHead">
-        <image src="../../resource/images/头像.png" class = "image"></image>
+        <image src="{{item.avatarUrl}}" class = "image"></image>
         <view>{{item.WXID}}:</view>
       </view>
       <view class = "responseContent">{{item.briefContent}}</view>

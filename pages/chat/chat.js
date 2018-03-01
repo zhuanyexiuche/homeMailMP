@@ -10,7 +10,7 @@ Page({
     chatInfo:null,
     respInfo:null,
     inviteText:"邀请回答",
-    addText:"写回答"
+    addText:"写回答",
   },
 
   /**

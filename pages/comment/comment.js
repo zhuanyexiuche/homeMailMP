@@ -78,7 +78,8 @@ Page({
         data:{
           QID:app.globalData.chatID,
           WXID:app.globalData.userInfo.nickName,
-          text:res.value
+          text:res.value,
+          avatarUrl:app.globalData.userInfo.avatarUrl
         },
         success:function(res){
           console.log(res);

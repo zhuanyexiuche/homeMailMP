@@ -6,7 +6,7 @@ App({
     responseID: null,
     topic: null,
     context: null,
-    serverUrl: false ? 'http://localhost' : 'https://jjmfly.com/HomeMail_war',
+    serverUrl: true ? 'http://localhost' : 'https://jjmfly.com/HomeMail_war',
     loginStatus: true,
     getPromission: function () {
       let that = this;
@@ -193,7 +193,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        //getOpenID();
+        //xgetOpenID();
       }
     })
     // 获取用户信息

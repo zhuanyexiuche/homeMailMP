@@ -12,7 +12,46 @@ Page({
     inviteText:"邀请回答",
     addText:"写回答",
   },
-
+  refresh:function(success){
+    let that = this;
+    let suc = success;
+    wx.request({
+      url: app.globalData.serverUrl + '/readQuestion',
+      data: {
+        brief: false,
+        QID: app.globalData.chatID
+      },
+      success: function (res) {
+        that.setData({
+          chatInfo: res.data
+        });
+        app.globalData.context = res.data.context;
+        app.globalData.topic = res.data.topic;
+      },
+      fail: function (reason) {
+        console.log(reason);
+      }
+    });
+    wx.request({
+      url: app.globalData.serverUrl + '/readResponse',
+      data: {
+        brief: true,
+        QID: app.globalData.chatID
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          respInfo: res.data
+        });
+        if (suc){
+          suc();
+        }
+      },
+      fail: function (reason) {
+        console.log(reason);
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -21,39 +60,7 @@ Page({
     this.setData({
       chatID:app.globalData.chatID,
     });
-    wx.request({
-      url: app.globalData.serverUrl+'/readQuestion',
-      data:{
-        brief:false,
-        QID:app.globalData.chatID
-      },
-      success:function(res){
-        that.setData({
-          chatInfo:res.data
-        });
-        app.globalData.context = res.data.context;
-        app.globalData.topic = res.data.topic;
-      },
-      fail:function(reason){
-        console.log(reason);
-      }
-    });
-    wx.request({
-      url: app.globalData.serverUrl+'/readResponse',
-      data:{
-        brief:true,
-        QID:app.globalData.chatID
-      },
-      success:function(res){
-        console.log(res.data);
-        that.setData({
-          respInfo:res.data
-        });
-      },
-      fail:function(reason){
-        console.log(reason);
-      }
-    });
+    this.refresh();
   },
 
   /**
@@ -87,7 +94,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.refresh(wx.stopPullDownRefresh());
   },
 
   /**

@@ -31,7 +31,7 @@ Page({
       success:function(res){
         that.setData({
           response:res.data,
-          belongToMe:(res.data.WXID===app.globalData.userInfo.nickName)
+          belongToMe:(res.data.WXID===app.globalData.open_id)
         });
       },
       fail:function(reason){
@@ -42,7 +42,7 @@ Page({
       url: app.globalData.serverUrl+'/readClap',
       data:{
         RID:app.globalData.responseID,
-        WXID: app.globalData.userInfo.nickName
+        WXID: app.globalData.open_id
       },
       success:function(res){
         console.log(res.data);
@@ -111,7 +111,7 @@ Page({
       url: app.globalData.serverUrl+'/writeClap',
       data:{
         RID:app.globalData.responseID,
-        WXID:app.globalData.userInfo.nickName
+        WXID:app.globalData.open_id
       },
       success:function(res){
         if (res.data!='fail'){

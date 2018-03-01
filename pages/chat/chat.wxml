@@ -14,7 +14,7 @@
     <navigator id = "{{item.ID}}" url='../fullResponse/fullResponse' class = "responseItem" bindtap='fullResponseTap'>
       <view class = "responseHead">
         <image src="{{item.avatarUrl}}" class = "image"></image>
-        <view>{{item.WXID}}:</view>
+        <view>{{item.WXNickName}}:</view>
       </view>
       <view class = "responseContent">{{item.briefContent}}</view>
       <view class = "responseBottom">{{item.clapCount}}赞同</view>

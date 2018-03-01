@@ -77,7 +77,8 @@ Page({
         url: app.globalData.serverUrl+'/writeResponse',
         data:{
           QID:app.globalData.chatID,
-          WXID:app.globalData.userInfo.nickName,
+          WXID:app.globalData.open_id,
+          nickName:app.globalData.userInfo.nickName,
           text:res.value,
           avatarUrl:app.globalData.userInfo.avatarUrl
         },

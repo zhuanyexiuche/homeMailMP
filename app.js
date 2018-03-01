@@ -8,6 +8,8 @@ App({
     context: null,
     serverUrl: true ? 'http://localhost' : 'https://jjmfly.com/HomeMail_war',
     loginStatus: true,
+    code:null,
+    open_id:null,
     getPromission: function () {
       let that = this;
       console.log(this.loginStatus==true);
@@ -18,10 +20,10 @@ App({
               if (data.authSetting["scope.userInfo"] == true) {
                 loginStatus = true;
                 wx.getUserInfo({
-                  withCredentials: false,
+                  withCredentials: true,
                   success: function (data) {
                     console.info("2成功获取用户返回数据");
-                    console.info(data.userInfo);
+                    console.info(data);
                     that.userInfo=data.userInfo;
                   },
                   fail: function () {
@@ -41,10 +43,10 @@ App({
           success: function (res) {
             if (res.code) {
               wx.getUserInfo({
-                withCredentials: false,
+                withCredentials: true,
                 success: function (data) {
                   console.info("1成功获取用户返回数据");
-                  console.info(data.userInfo);
+                  console.info(data);
                   that.userInfo=data.userInfo;
                 },
                 fail: function () {
@@ -72,10 +74,10 @@ App({
                               if (data.authSetting["scope.userInfo"] == true) {
                                 that.loginStatus = true;
                                 wx.getUserInfo({
-                                  withCredentials: false,
+                                  withCredentials: true,
                                   success: function (data) {
                                     console.info("3成功获取用户返回数据");
-                                    console.info(data.userInfo);
+                                    console.info(data);
                                     that.userInfo=data.userInfo;
                                     
                                   },
@@ -111,77 +113,6 @@ App({
       }
     }
   },
-  getOpenID:function(){
-    wx.login({
-      success: function (res) {
-        wx.getSetting({
-          success(setRes) {
-            // 判断是否已授权  
-            if (!setRes.authSetting['scope.userInfo']) {
-              // 授权访问  
-              wx.authorize({
-                scope: 'scope.userInfo',
-                success() {
-                  //获取用户信息  
-                  wx.getUserInfo({
-                    lang: "zh_CN",
-                    success: function (userRes) {
-                      //发起网络请求  
-                      wx.request({
-                        url: config.loginWXUrl,
-                        data: {
-                          code: res.code,
-                          encryptedData: userRes.encryptedData,
-                          iv: userRes.iv
-                        },
-                        header: {
-                          "Content-Type": "application/x-www-form-urlencoded"
-                        },
-                        method: 'POST',
-                        //服务端的回掉  
-                        success: function (result) {
-                          var data = result.data.result;
-                          data.expireTime = nowDate + EXPIRETIME;
-                          wx.setStorageSync("userInfo", data);
-                          userInfo = data;
-                        }
-                      })
-                    }
-                  })
-                }
-              })
-            } else {
-              //获取用户信息  
-              wx.getUserInfo({
-                lang: "zh_CN",
-                success: function (userRes) {
-                  //发起网络请求  
-                  wx.request({
-                    url: config.loginWXUrl,
-                    data: {
-                      code: res.code,
-                      encryptedData: userRes.encryptedData,
-                      iv: userRes.iv
-                    },
-                    header: {
-                      "Content-Type": "application/x-www-form-urlencoded"
-                    },
-                    method: 'POST',
-                    success: function (result) {
-                      var data = result.data.result;
-                      data.expireTime = nowDate + EXPIRETIME;
-                      wx.setStorageSync("userInfo", data);
-                      userInfo = data;
-                    }
-                  })
-                }
-              })
-            }
-          }
-        })
-      }
-    })  
-  },
   onLaunch: function () {
     // 展示本地存储能力
     /*
@@ -190,8 +121,21 @@ App({
     wx.setStorageSync('logs', logs)
     */
     // 登录
+    let that = this;
     wx.login({
       success: res => {
+        console.log(res);
+        that.globalData.code = res.code;
+        wx.request({
+          url: that.globalData.serverUrl+'/readOpenID',
+          data:{
+            code:that.globalData.code
+          },
+          success:function(res){
+            that.globalData.open_id=res.data.openid
+            console.log(res);
+          }
+        })
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         //xgetOpenID();
       }

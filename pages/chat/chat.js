@@ -22,6 +22,7 @@ Page({
         QID: app.globalData.chatID
       },
       success: function (res) {
+        console.log(res);
         that.setData({
           chatInfo: res.data
         });
@@ -41,7 +42,11 @@ Page({
       success: function (res) {
         console.log(res.data);
         that.setData({
-          respInfo: res.data
+          respInfo: res.data.map(function(curVal){
+            let temp = curVal;
+            temp.briefContent = temp.briefContent.replace("\\n","\n\r");
+            return temp;
+          })
         });
         if (suc){
           suc();

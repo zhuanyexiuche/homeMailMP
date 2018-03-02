@@ -8,6 +8,7 @@
 }
 .chatTopicContext{
   font-size:medium;
+  white-space: pre-wrap
 }
 .responseItem{
   padding:15rpx;
@@ -21,6 +22,8 @@
   font-size: medium;
   padding-top:5rpx;
   padding-bottom: 5rpx;
+  height: auto;
+  white-space: pre-wrap;
 }
 .responseBottom{
   font-size:xx-small;

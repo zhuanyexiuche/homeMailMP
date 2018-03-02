@@ -4,6 +4,7 @@
 @import "../chat/chat.wxss";
 .fullresponseContent{
   padding:30rpx; 
+  
 }
 
 .buttonView{

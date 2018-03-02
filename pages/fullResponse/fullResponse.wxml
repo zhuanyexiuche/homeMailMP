@@ -11,8 +11,6 @@
         <button bindtap='deleteTap' class="delete {{belongToMe?'deleted':''}}">删除</button>
       </view>
     </view>
-    <view class = "responseContent fullresponseContent">
-      {{response.content}}
-    </view>
+    <view class = "responseContent fullresponseContent">{{response.content}}</view>
   </view>
 </view>

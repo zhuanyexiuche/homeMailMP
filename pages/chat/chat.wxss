@@ -22,7 +22,7 @@
 .responseHead{
   font-size: small;
   display: inline-flex;
-  width:470rpx;
+  width:450rpx;
     background-color:#fdfdfd;
   font-family:Courier New, Courier, monospace;
 }

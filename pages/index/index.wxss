@@ -1,13 +1,15 @@
 /**index.wxss**/
 @import '../common/weui.wxss';
 .chatList{
-  background-color: #e0e0e0;
-  height:auto;
+  background-color: #eaeaea;
+  min-height: 1400rpx;
 }
 .chatItem{
-  background-color:#fefefe;
+  background-color:#fcfcfc;
   margin: 20rpx;
-  border-radius: 6rpx;
+  border-radius: 40rpx;
+  height:auto;
+  font-family:Courier New, Courier, monospace;
 }
 .firstChatItem{
   margin-top:0rpx; 
@@ -30,7 +32,7 @@
 }
 
 .search{
-  height: 32px;
+  height: auto;
   display: flex;
 }
 
@@ -44,18 +46,20 @@
 }
 
 .questionInput{
-  height: 32px;
-  margin-left: 10px;
+  height: auto;
 }
 
 .inputQView{
-  width: 70%;
+  display: flex;
+  width:500rpx;
   border:  2px solid rgba(128, 128, 128, 0.5);
   border-radius: 20px;
   margin-left: 10px;
   margin-top: 5px;
 }
-
+.block{
+  width:20rpx;
+}
 .btnView{
   width: 110px;
   display: flex;

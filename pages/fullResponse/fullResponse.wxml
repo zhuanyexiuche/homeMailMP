@@ -3,9 +3,11 @@
   <view class = "chatTopic">{{topic}}</view>
   <view class = "chatTopic chatTopicContext">{{context}}</view>
   <view class = "responseItem">
-    <view class = "responseHead">
-      <image src="{{response.avatarUrl}}" class = "image"></image>
-      <text>{{response.WXNickName}}:</text>
+    <view class = "header">
+      <view class = "responseHead">
+        <image src="{{response.avatarUrl}}" class = "image"></image>
+        <text>{{response.WXNickName}}:</text>
+      </view>
       <view class='buttonView'>
         <button bindtap='supportTap' class="support {{supported?'supported':''}}">赞</button>
         <button bindtap='deleteTap' class="delete {{belongToMe?'deleted':''}}">删除</button>

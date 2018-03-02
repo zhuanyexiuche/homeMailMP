@@ -1,8 +1,8 @@
 <!--index.wxml-->
   <view class='search'>
     <view class='inputQView'>
-      <input id = "search" placeholder='输入话题' class='qustionInput'>
-      </input>
+      <view class = 'block'></view>
+      <input id = "search" placeholder='输入话题' class='qustionInput'></input>
     </view>
     <view class='btnView'>
       <button class='qAndSBtn' bindtap='searchTap'>

@@ -4,13 +4,16 @@
 @import "../chat/chat.wxss";
 .fullresponseContent{
   padding:30rpx; 
-  
 }
-
+.header{
+  display: inline-flex;
+  justify-content: space-between;
+  height:auto;
+}
 .buttonView{
-  display: flex;
-  width: 127px;
-  margin-left: 60%;
+  display: inline-flex;
+  width:max-content;
+  height:auto;
 }
 
 .delete{

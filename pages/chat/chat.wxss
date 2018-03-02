@@ -5,29 +5,40 @@
   background-color: #fdfdfd;
   padding: 20rpx;
   font-size:larger;
+  font-family:Courier New, Courier, monospace;
 }
 .chatTopicContext{
   font-size:medium;
-  white-space: pre-wrap
+  white-space: pre-wrap;
+  font-family:Courier New, Courier, monospace;
 }
 .responseItem{
-  padding:15rpx;
-  margin-top:15rpx;
+  padding:25rpx;
+  margin: 15rpx;
   background-color:#fdfdfd;
+  font-family:Courier New, Courier, monospace;
+  border-radius: 25rpx;
 }
 .responseHead{
-  font-size: medium;
+  font-size: small;
+  display: inline-flex;
+  width:470rpx;
+    background-color:#fdfdfd;
+  font-family:Courier New, Courier, monospace;
 }
 .responseContent{
   font-size: medium;
   padding-top:5rpx;
   padding-bottom: 5rpx;
+    background-color:#fdfdfd;
   height: auto;
   white-space: pre-wrap;
+  font-family:Courier New, Courier, monospace;
 }
 .responseBottom{
   font-size:xx-small;
-}
+  background-color:#fdfdfd;
+font-family:Courier New, Courier, monospace;}
 .buttonView{
   background-color: #fdfdfd;
   display: flex;

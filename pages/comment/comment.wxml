@@ -1,4 +1,6 @@
 <view>
-  <textarea id = "text" placeholder='回答...' class='comment'></textarea>
+  <view width='700rpx' class = "top">
+  <textarea id = "text" placeholder='回答...' class='comment' auto-height='true' maxlength='768'></textarea>
+  </view>
   <button bindtap='confirm' class='btn'>{{confirmText}}</button>
 </view>

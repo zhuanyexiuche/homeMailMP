@@ -11,6 +11,8 @@
   font-size:medium;
   white-space: pre-wrap;
   font-family:Courier New, Courier, monospace;
+  padding-top:10rpx;
+  padding-bottom: 10rpx;
 }
 .responseItem{
   padding:25rpx;
@@ -62,4 +64,13 @@ font-family:Courier New, Courier, monospace;}
   height: 30px;
   font-size: 13px;
   border-radius: -1em;
+}
+.folder{
+  margin: 0rpx;
+  padding:0rpx;
+  font-size:small;
+  text-align: center;
+}
+.hide{
+  display: none;
 }

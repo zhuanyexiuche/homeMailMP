@@ -11,6 +11,11 @@ Page({
     respInfo:null,
     inviteText:"邀请回答",
     addText:"写回答",
+    context:null,
+    foldedContext:null,
+    needToFold:false,
+    folded:true,
+    showContext:null
   },
   refresh:function(success){
     let that = this;
@@ -23,8 +28,19 @@ Page({
       },
       success: function (res) {
         console.log(res);
+        let temp = res.data.context;
+        if (res.data.context.length>24){
+          that.setData({
+            needToFold:true,
+            folded:true
+          });
+          temp = res.data.context.substring(0,24)+"...";
+        }
         that.setData({
-          chatInfo: res.data
+          context:res.data.context,
+          foldedContext:temp,
+          chatInfo: res.data,
+          showContext:temp
         });
         app.globalData.context = res.data.context;
         app.globalData.topic = res.data.topic;
@@ -68,6 +84,7 @@ Page({
       chatID:app.globalData.chatID,
     });
     this.refresh();
+    this.data.folded=true;
   },
 
   /**
@@ -146,5 +163,21 @@ Page({
   fullResponseTap:function(e){
     app.globalData.responseID = e.currentTarget.id;
     console.log(app.globalData.responseID);
+  },
+  folder:function(e){
+    /*
+    if (this.data.needToFold){
+      this.setData({
+        showContext:this.data.folded?this.data.context:this.data.foldedContext
+      });
+      this.data.folded = this.data.folded==false;
+    }
+    */
+    console.log(this.data.needToFold+" "+this.data.folded);
+    if (this.data.needToFold){
+      this.setData({
+        folded:this.data.folded==false
+      });
+    }
   }
 })

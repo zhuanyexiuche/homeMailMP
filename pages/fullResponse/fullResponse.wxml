@@ -1,7 +1,8 @@
 <!--pages/fullResponse/fullResponse.wxml-->
 <view class = "chatList">
   <view class = "chatTopic">{{topic}}</view>
-  <view class = "chatTopic chatTopicContext">{{context}}</view>
+  <view class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}  </view>
+  <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
   <view class = "responseItem">
     <view class = "header">
       <view class = "responseHead">

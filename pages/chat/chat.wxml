@@ -1,7 +1,8 @@
 <!--pages/chat/chat.wxml-->
 <view class = "chatList">
   <view id = "Topic" class = "chatTopic">{{chatInfo.topic}}</view>
-  <view id = "TopicContext" class = "chatTopic chatTopicContext">{{chatInfo.context}}</view>
+  <view id = "TopicContext" class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}</view>
+  <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
   <view class = "buttonView">
     <button bindtap='inviteTap' class='btn'>
       <image src="../../resource/images/plus.png" class = "imageIcon"></image>

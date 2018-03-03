@@ -10,50 +10,62 @@ Page({
     context:null,
     response:null,
     supported:null,
-    belongToMe:null
+    belongToMe:null,
+    needToFold:false,
+    folded:true,
+    foldedContext:null,
   },
-
+  refresh:function(){
+    let that = this;
+    wx.request({
+      url: app.globalData.serverUrl + '/readResponse',
+      data: {
+        brief: false,
+        RID: app.globalData.responseID
+      },
+      success: function (res) {
+        that.setData({
+          response: res.data,
+          belongToMe: (res.data.WXID === app.globalData.open_id)
+        });
+      },
+      fail: function (reason) {
+        console.log(reason);
+      }
+    });
+    wx.request({
+      url: app.globalData.serverUrl + '/readClap',
+      data: {
+        RID: app.globalData.responseID,
+        WXID: app.globalData.open_id
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          supported: res.data
+        });
+      },
+      fail: function (reason) {
+        console.log(reason);
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
+    if (app.globalData.context.length>24){
+      this.setData({
+        foldedContext:app.globalData.context.substring(0,24)+"...",
+        needToFold:true
+      });
+      
+    }
     this.setData({
       topic:app.globalData.topic,
       context:app.globalData.context
     });
-    wx.request({
-      url: app.globalData.serverUrl+'/readResponse',
-      data:{
-        brief:false,
-        RID:app.globalData.responseID
-      },
-      success:function(res){
-        that.setData({
-          response:res.data,
-          belongToMe:(res.data.WXID===app.globalData.open_id)
-        });
-      },
-      fail:function(reason){
-        console.log(reason);
-      }
-    });
-    wx.request({
-      url: app.globalData.serverUrl+'/readClap',
-      data:{
-        RID:app.globalData.responseID,
-        WXID: app.globalData.open_id
-      },
-      success:function(res){
-        console.log(res.data);
-        that.setData({
-          supported:res.data
-        });
-      },
-      fail:function(reason){
-        console.log(reason);
-      }
-    })
+    this.refresh();
   },
 
   /**
@@ -143,5 +155,12 @@ Page({
         console.log(reason);
       }
     })
+  },
+  folder:function(e){
+    if (this.data.needToFold){
+      this.setData({
+        folded:this.data.folded==false
+      });
+    }
   }
 })

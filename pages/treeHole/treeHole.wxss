@@ -13,14 +13,14 @@
 }
 
 .content_blue{
-  background-color: rgba(135, 206, 235, 0.3);
+  border:  2px solid rgba(135, 206, 235, 0.25);
   margin: 10px;
   border-radius: 6px;
   height: 45px;
 }
 
 .content_yellow{
-  background-color: rgba(255, 234, 214, 0.6);
+  border:  2px solid rgba(255, 234, 214, 0.75);
   margin: 10px;
   border-radius: 6px;
   height: 45px;

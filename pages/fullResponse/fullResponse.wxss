@@ -10,6 +10,7 @@
   justify-content: space-between;
   height:auto;
 }
+
 .buttonView{
   display: inline-flex;
   width:max-content;

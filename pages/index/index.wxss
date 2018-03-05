@@ -5,6 +5,7 @@
   min-height: 1400rpx;
 }
 .chatItem{
+  border:  2px solid rgba(135, 206, 235, 0.3);
   background-color:#fcfcfc;
   margin: 20rpx;
   border-radius: 40rpx;
@@ -32,6 +33,8 @@
 }
 
 .search{
+  border-radius: 15rpx;
+  background-color:#eaeaea;
   height: auto;
   display: flex;
 }
@@ -39,7 +42,7 @@
 .qAndSBtn{
   width: 100%;
   height: 32px;
-  background-color: transparent;
+  background-color: #fcfcfc;
   -webkit-text-fill-color: skyblue;
   font-size: 13px;
   display: inline-block;
@@ -50,13 +53,16 @@
 }
 
 .inputQView{
+  background-color: #fcfcfc;
   display: flex;
   width:500rpx;
-  border:  2px solid rgba(128, 128, 128, 0.5);
-  border-radius: 20px;
-  margin-left: 10px;
-  margin-top: 5px;
+  border:  2px solid rgba(135, 206, 235, 0.3);
+  border-radius: 15px;
+  margin-left: 5px;
+  margin-top: 2px;
+  font-size: 13px;
 }
+
 .block{
   width:20rpx;
 }

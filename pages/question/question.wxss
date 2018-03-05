@@ -1,19 +1,24 @@
 .title {
-  margin: 10px;
-  border-color: black;
+  margin: 5px;
+  border:  1.5px solid rgba(135, 206, 235, 0.3);
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 2px;
 }
 
 .detail{
-  margin: 20px;
-  border-color: black;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border:  1px solid rgba(128, 128, 128, 0.5);
   height: 365px;
 }
 
 .btn{
   background-color: transparent;
-  width: 95px;
+  width: 115px;
   text-align: center;
   height: 32px;
-  font-size: 14px;
+  font-size: 13px;
   align-self: baseline;
 }

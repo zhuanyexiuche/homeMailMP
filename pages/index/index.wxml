@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<view class = "chatList">
   <view class='search'>
     <view class='inputQView'>
       <view class = 'block'></view>
@@ -11,8 +12,7 @@
       <button class='qAndSBtn' bindtap='addQTap'>
         <image src="../../resource/images/write.png" class = "imageIcon"></image></button>
     </view>    
-</view>
-<view class = "chatList">
+  </view>
   <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
     <navigator id = "{{item.ID}}" url = "../chat/chat"class = "chatItem {{index==0?'firstChatItem':''}}" bindtap='itemTap'>
       <view class = "chatItemTitle">

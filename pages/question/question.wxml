@@ -1,5 +1,9 @@
 <view>
-  <input id = 'topic' placeholder='标题' class='title'></input>
-  <textarea id= 'text' placeholder='问题详情...' class='detail'></textarea>
+  <view class='title'>
+    <input id = 'topic' placeholder='请输入标题...'></input>
+  </view>
+  <view class='detail'>
+    <textarea id= 'text' placeholder='问题详情...'></textarea>
+  </view>
   <button bindtap='confirm' class='btn'>{{confirmText}}</button>
 </view>

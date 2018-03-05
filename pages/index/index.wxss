@@ -1,19 +1,18 @@
 /**index.wxss**/
 @import '../common/weui.wxss';
 .chatList{
-  background-color: #eaeaea;
+  background-color: white;
   min-height: 1400rpx;
 }
-.chatItem{
-  border:  2px solid rgba(135, 206, 235, 0.3);
-  background-color:#fcfcfc;
+.item_blue{
+  background-color: rgba(135, 206, 235, 0.2);
   margin: 20rpx;
   border-radius: 40rpx;
   height:auto;
   font-family:Courier New, Courier, monospace;
 }
-.firstChatItem{
-  margin-top:0rpx; 
+.item_yellow{
+  background-color: rgba(255, 234, 214, 0.3);
 }
 .chatItemText{
   text-align: center;
@@ -34,7 +33,6 @@
 
 .search{
   border-radius: 15rpx;
-  background-color:#eaeaea;
   height: auto;
   display: flex;
 }

@@ -14,7 +14,7 @@
     </view>    
   </view>
   <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
-    <navigator id = "{{item.ID}}" url = "../chat/chat"class = "chatItem {{index==0?'firstChatItem':''}}" bindtap='itemTap'>
+    <navigator id = "{{item.ID}}" url = "../chat/chat" class = "item_blue {{index%2==0?'item_yellow':''}}" bindtap='itemTap'>
       <view class = "chatItemTitle">
         {{item.topic}}
       </view>

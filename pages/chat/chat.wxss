@@ -16,10 +16,11 @@
 }
 .responseItem{
   padding:25rpx;
-  margin: 15rpx;
+  margin: 10rpx;
   background-color:#fdfdfd;
   font-family:Courier New, Courier, monospace;
-  border-radius: 25rpx;
+  border-radius: 20rpx;
+  box-shadow: 1px 1px 1px 1px grey;
 }
 .responseHead{
   font-size: small;

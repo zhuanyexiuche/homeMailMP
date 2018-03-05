@@ -14,17 +14,16 @@
 
 .content_blue{
   padding: 10px;
-  background: rgba(135, 206, 235, 0.2);
+  background: rgba(135, 206, 235, 0.1);
+  box-shadow: 1px 1px 1px 1px rgb(135, 206, 235);
   margin: 10px;
   border-radius: 6px;
-  height: 45px;
+  height: auto;
 }
 
 .content_yellow{
-  background: rgba(255, 234, 214, 0.3);
-  margin: 10px;
-  border-radius: 6px;
-  height: 45px;
+  background: rgba(255, 234, 214, 0.2);
+  box-shadow: 1px 1px 1px 1px rgb(255, 234, 214);
 }
 
 .imageIcon{

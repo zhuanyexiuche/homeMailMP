@@ -5,7 +5,7 @@
   <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
   <view class = "responseItem">
     <view class = "header">
-      <view class = "responseHead">
+      <view class = "responseHead responseHead2">
         <image src="{{response.avatarUrl}}" class = "image"></image>
         <text>{{response.WXNickName}}:</text>
       </view>

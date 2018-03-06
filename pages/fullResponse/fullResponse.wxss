@@ -22,16 +22,17 @@
 }
 
 .deleted{
-  width: 75px;
+  width: 120rpx;
   height: 25px;
   font-size: 12px;
   -webkit-text-fill-color: grey;
   background-color: transparent;
   display:unset;
+  margin-left: 10rpx;
 }
 
 .support{
-  width: 42px;
+  width: 70rpx;
   height: 25px;
   -webkit-text-fill-color: grey;
   background-color: transparent;
@@ -41,4 +42,7 @@
 .supported{
   -webkit-text-fill-color: white;
   background-color: rgba(128, 128, 128, 0.5);
+}
+.responseHead2{
+  width:500rpx;
 }

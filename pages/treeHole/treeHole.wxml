@@ -4,7 +4,7 @@
 </view>
 <view class='treeHoleList'>
   <block wx:for="{{treeHoleList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
-    <navigator id = "{{item.ID}}" url = "../treeHole/treeHole" bindtap='itemTap' class = "content_blue {{index%2==0?'content_yellow':''}}">
+    <navigator id = "{{item.ID}}" url = "../secret/secret" bindtap='itemTap' class = "content_blue {{index%2==0?'content_yellow':''}}">
       <button class='change'>
       <image src="../../resource/images/pencil.png" class = "imageIcon"></image>
       </button>

@@ -6,12 +6,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-    secretID:null
+    secretID:null,
+    secret:null
   },
   refresh:function(succ){
     this.setData({
       secretID:app.globalData.chatID
     });
+    let that = this;
+    wx.request({
+      url: app.globalData.serverUrl+'/readSecret',
+      data:{
+        brief:false,
+        SID:app.globalData.chatID
+      },
+      success:function(res){
+        that.setData({
+          secret:res.data
+        });
+        console.log(res);
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载

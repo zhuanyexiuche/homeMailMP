@@ -10,6 +10,7 @@ App({
     loginStatus: true,
     code:null,
     open_id:null,
+    isSecret:false,
     getPromission: function () {
       let that = this;
       console.log(this.loginStatus==true);

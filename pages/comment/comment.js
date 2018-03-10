@@ -72,29 +72,50 @@ Page({
     },function(res){
       console.log(res.value);
       console.log(app.globalData.userInfo);
-      
-      wx.request({
-        url: app.globalData.serverUrl+'/writeResponse',
-        data:{
-          QID:app.globalData.chatID,
-          WXID:app.globalData.open_id,
-          nickName:app.globalData.userInfo.nickName,
-          text:res.value,
-          avatarUrl:app.globalData.userInfo.avatarUrl
-        }, 
-        success:function(res){
-          console.log(res);
-          if (res.data=='success'){
+      if (app.globalData.isSecret){
+        wx.request({
+          url: app.globalData.serverUrl + '/writeSecretComment',
+          data: {
+            SID:app.globalData.chatID,
+            context:res.value
+          },
+          success: function (res) {
             console.log(res);
-            wx.navigateBack();
-          }else{
-            console.log("数据库访问出错");
+            if (res.data == 'fali') {
+              console.log("数据库访问出错");
+            } else {
+              console.log(res);
+              wx.navigateBack();
+            }
+          },
+          fail: function (reason) {
+            console.log(reason);
           }
-        },
-        fail:function(reason){
-          console.log(reason);
-        }
-      })
+        });
+      }else{
+        wx.request({
+          url: app.globalData.serverUrl + '/writeResponse',
+          data: {
+            QID: app.globalData.chatID,
+            WXID: app.globalData.open_id,
+            nickName: app.globalData.userInfo.nickName,
+            text: res.value,
+            avatarUrl: app.globalData.userInfo.avatarUrl
+          },
+          success: function (res) {
+            console.log(res);
+            if (res.data == 'success') {
+              console.log(res);
+              wx.navigateBack();
+            } else {
+              console.log("数据库访问出错");
+            }
+          },
+          fail: function (reason) {
+            console.log(reason);
+          }
+        });
+      }
     }).exec();
   }
 })

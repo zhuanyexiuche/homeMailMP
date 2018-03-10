@@ -7,7 +7,8 @@ Page({
    */
   data: {
     secretID:null,
-    secret:null
+    secret:null,
+    comment:null
   },
   refresh:function(succ){
     this.setData({
@@ -26,7 +27,23 @@ Page({
         });
         console.log(res);
       }
-    })
+    });
+    wx.request({
+      url: app.globalData.serverUrl+'/readSecretComment',
+      data:{
+        brief:true,
+        SID:app.globalData.chatID
+      },
+      success:function(res){
+        that.setData({
+          comment:res.data
+        });
+        console.log(res);
+      },
+      fail:function(reason){
+        console.log(reason);
+      }
+    });
   },
   /**
    * 生命周期函数--监听页面加载
@@ -46,7 +63,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.refresh();
   },
 
   /**
@@ -67,7 +84,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.refresh(wx.stopPullDownRefresh());
   },
 
   /**

@@ -31,6 +31,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.globalData.isSecret = true;
     this.refresh();
   },
 
@@ -85,5 +86,6 @@ Page({
 
   itemTap: function (e) {
     app.globalData.chatID = e.currentTarget.id;
+
   }
 })

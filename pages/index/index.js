@@ -56,6 +56,7 @@ Page({
     this.getQuestion(wx.stopPullDownRefresh());
   },
   onLoad: function () {
+    app.globalData.isSecret = false;
     this.getQuestion();
   },
   onShow:function(){

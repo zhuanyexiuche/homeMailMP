@@ -27,15 +27,17 @@
 }
 
 .imageIcon{
-  height:25rpx;
-  width:30rpx;
-  margin-bottom: 15px;
-  margin-left: -5px;
+  height:40rpx;
+  width:40rpx;
+  margin-top: 15rpx;
+  margin-right: 10rpx;
 }
 
 .change{
-  height:45rpx;
-  width:50rpx;
-  margin-left: 85%;
+  height:75rpx;
+  width:300rpx;
+  font-size: 12px;
   background-color: transparent;
+  border-radius: 4em;
+  box-shadow: 1px 0 0 1px darkgray;
 }

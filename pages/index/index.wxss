@@ -61,7 +61,7 @@
   margin-left: 5px;
   margin-top: 2px;
   font-size: 13px;
-  box-shadow: 1px 1px 1px 1px rgb(135, 206, 235);
+  box-shadow: 1px 1px 0 1px rgb(135, 206, 235);
 }
 
 .block{

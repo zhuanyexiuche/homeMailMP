@@ -82,5 +82,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  addTap: function () {
+    wx.navigateTo({
+      url: '../comment/comment'
+    })
   }
 })

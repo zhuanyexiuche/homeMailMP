@@ -74,6 +74,7 @@ Page({
         wx.showModal({
           title: '标题不可以为空',
           content: '请输入标题',
+          showCancel:false
         });
         return;
       }

@@ -78,6 +78,7 @@ Page({
         wx.showModal({
           title: '回复内容不可以为空',
           content: '请输入回复内容',
+          showCancel:false
         });
         return;
       }

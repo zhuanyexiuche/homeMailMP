@@ -91,9 +91,17 @@ Page({
           that.setData({
             chatList:res.data
           });
+          wx.showToast({
+            title: '检索成功',
+            duration:750
+          })
         },
         fail:function(reason){
           console.log(reason);
+          wx.showToast({
+            title: '请求失败',
+            
+          })
         }
       })
     }).exec();

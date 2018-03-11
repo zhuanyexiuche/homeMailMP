@@ -66,14 +66,21 @@ Page({
   },
 
   confirm:function(e){
-    wx.createSelectorQuery().select('#text').fields({
+    wx.createSelectorQuery().select('#topic').fields({
       properties: ['value']
-    }, function (res) {
-      console.log(res.value);
-      wx.createSelectorQuery().select('#topic').fields({
+    }, function (res2) {
+      console.log("\""+res2.value+"\"");
+      if (res2.value==""){
+        wx.showModal({
+          title: '标题不可以为空',
+          content: '请输入标题',
+        });
+        return;
+      }
+      wx.createSelectorQuery().select('#text').fields({
         properties:['value']
-      },function(res2){
-        console.log(res2.value);
+      },function(res){
+        console.log(res.value);
         wx.request({
           url: app.globalData.serverUrl+'/writeQuestion',
           data:{

@@ -7,6 +7,8 @@ Page({
    */
   data: {
     confirmText:"提交",
+    maxWord :512,
+    restWord : 512,
   },
 
   /**
@@ -48,7 +50,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+
   },
 
   /**
@@ -71,6 +73,13 @@ Page({
       properties:['value']
     },function(res){
       console.log(res.value);
+      if(res.value==""){
+        wx.showModal({
+          title: '回复内容不可以为空',
+          content: '请输入回复内容',
+        });
+        return;
+      }
       console.log(app.globalData.userInfo);
       if (app.globalData.isSecret){
         wx.request({
@@ -81,7 +90,7 @@ Page({
           },
           success: function (res) {
             console.log(res);
-            if (res.data == 'fali') {
+            if (res.data == 'fail') {
               console.log("数据库访问出错");
             } else {
               console.log(res);
@@ -117,5 +126,11 @@ Page({
         });
       }
     }).exec();
+  },
+  textInput:function(input){
+    console.log(input);
+    this.setData({
+      restWord : this.data.maxWord-input.detail.cursor
+    });
   }
 })

@@ -24,3 +24,11 @@
   padding:10rpx;
   padding-left:15rpx;
 }
+.restWord{
+  /* margin:20rpx; */
+  /* padding:10rpx; */
+  color: rgba(132, 132, 132,0.9);
+  text-align: center;
+  /* background-color:red; */
+  width: 100%;
+}

@@ -41,26 +41,29 @@
 
 .qAndSBtn{
   width: 100%;
-  height: 32px;
+  height: 40px;
   background-color: #fcfcfc;
   -webkit-text-fill-color: skyblue;
-  font-size: 13px;
+  font-size: 16px;
   display: inline-block;
 }
 
 .questionInput{
   height: auto;
+  vertical-align: middle;
 }
 
 .inputQView{
   background-color: #fcfcfc;
   display: flex;
   width:500rpx;
+  height:inherit;
   border:  2px solid rgba(135, 206, 235, 0.3);
   border-radius: 15px;
   margin-left: 5px;
   margin-top: 2px;
-  font-size: 13px;
+  font-size: 20px;
+  align-items: center;
   box-shadow: 1px 1px 0 1px rgb(135, 206, 235);
 }
 

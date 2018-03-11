@@ -9,6 +9,7 @@ Page({
     confirmText:"提交",
     maxWord :512,
     restWord : 512,
+    focus:false
   },
 
   /**
@@ -130,7 +131,20 @@ Page({
   textInput:function(input){
     console.log(input);
     this.setData({
-      restWord : this.data.maxWord-input.detail.cursor
+      restWord : this.data.maxWord-input.detail.cursor,
+      focus:true
     });
+  },
+  textFocus:function(){
+    this.setData({
+      focus:true
+    });
+    console.log("focus");
+  },
+  textBlur:function(){
+    this.setData({
+      focus:false
+    });
+    console.log("blur");
   }
 })

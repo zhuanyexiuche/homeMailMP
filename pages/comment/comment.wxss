@@ -5,10 +5,12 @@
 
 .comment{
   border-color: black;
-  min-height: 365px;
+  min-height: 365px; 
   width: inherit;
 }
-
+.comment-focus{
+  min-height: unset;
+}
 .btn{
   background-color: transparent;
   width: 95px;

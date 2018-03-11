@@ -95,7 +95,15 @@ Page({
               console.log("数据库访问出错");
             } else {
               console.log(res);
-              wx.navigateBack();
+              wx.showToast({
+                title: '发表成功',
+              });
+              setTimeout(() => {
+                wx.navigateBack({
+
+                });
+              }, 750);
+              
             }
           },
           fail: function (reason) {
@@ -116,7 +124,15 @@ Page({
             console.log(res);
             if (res.data == 'success') {
               console.log(res);
-              wx.navigateBack();
+              wx.showToast({
+                title: '发表成功',
+              });
+              setTimeout(()=>{
+                wx.navigateBack({
+                  
+                });
+              },750);
+              // setTimeout(wx.navigateBack(),1000);
             } else {
               console.log("数据库访问出错");
             }

@@ -10,7 +10,7 @@
         <text>{{response.WXNickName}}:</text>
       </view>
       <view class='buttonView'>
-        <button bindtap='supportTap' class="support {{supported?'supported':''}}">赞</button>
+        <button bindtap='supportTap' class="btnn {{supported?'supported':''}}">点赞</button>
         <button bindtap='deleteTap' class="delete {{belongToMe?'deleted':''}}">删除</button>
       </view>
     </view>

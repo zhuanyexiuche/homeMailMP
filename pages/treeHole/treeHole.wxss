@@ -27,16 +27,19 @@
 }
 
 .imageIcon{
-  height:40rpx;
-  width:40rpx;
-  margin-top: 15rpx;
-  margin-right: 10rpx;
+  height:25px;
+  width:25px;
+  margin:10px;
+  margin-right:6px;
+  margin-left:10px;
 }
 
 .change{
-  height:75rpx;
-  width:300rpx;
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  height:auto;
+  width:fit-content;
+  font-size: 16px;
   background-color: transparent;
   border-radius: 4em;
   box-shadow: 1px 0 0 1px darkgray;

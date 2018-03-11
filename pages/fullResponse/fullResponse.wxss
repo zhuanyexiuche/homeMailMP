@@ -13,36 +13,45 @@
 
 .buttonView{
   display: inline-flex;
-  width:max-content;
+  width:auto;
   height:auto;
 }
 
 .delete{
-  display: none;
+  height:32px;
+  width:fit-content;
+  font-size:16px;
+  -webkit-text-fill-color: grey;
+  background-color: transparent;
+  align-items:center;
+  padding-left:35rpx;
+   padding-right:35rpx;
+   display:none; 
 }
 
 .deleted{
-  width: 120rpx;
-  height: 25px;
-  font-size: 12px;
-  -webkit-text-fill-color: grey;
-  background-color: transparent;
-  display:unset;
-  margin-left: 10rpx;
+  display:flex;
 }
-
-.support{
-  width: 70rpx;
-  height: 25px;
-  -webkit-text-fill-color: grey;
+.btnn{
+  height:32px;
+  width:fit-content;
+  font-size:16px;
+  -webkit-text-fill-color: rgb(100, 100, 100);
   background-color: transparent;
-  text-align: center;
-  font-size: 12px;
+
+  align-items:center;
+  /* text-align: center; */
+  padding-left:35rpx;
+   padding-right:35rpx;
+   display:flex; 
+   margin-right:10rpx;
+
 }
 .supported{
-  -webkit-text-fill-color: white;
+  /* -webkit-text-fill-color: white; */
   background-color: rgba(128, 128, 128, 0.5);
 }
 .responseHead2{
-  width:500rpx;
+  width:425rpx;
+  /* background-color:red; */
 }

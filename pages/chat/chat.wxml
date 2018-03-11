@@ -5,11 +5,9 @@
   <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
   <view class = "buttonView">
     <button bindtap='inviteTap' class='btn'>
-      <image src="../../resource/images/plus.png" class = "imageIcon"></image>
-    {{inviteText}}</button>
+      <image src="../../resource/images/plus.png" class = "imageIcon"></image>{{inviteText}}</button>
     <button bindtap='addTap' class='btn'>
-      <image src="../../resource/images/write.png" class = "imageIcon"></image>
-    {{addText}}</button>
+      <image src="../../resource/images/write.png" class = "imageIcon"></image>{{addText}}</button>
   </view>
   
   <block wx:for="{{respInfo}}" wx:for-item="item" wx:for-index="index" wx:key="item.ID">

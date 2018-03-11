@@ -10,7 +10,7 @@ Page({
     chatInfo:null,
     respInfo:null,
     inviteText:"邀请回答",
-    addText:"写回答",
+    addText:"增加回答",
     context:null,
     foldedContext:null,
     needToFold:false,
@@ -136,14 +136,11 @@ Page({
   },
 
   inviteTap:function(){
-    this.setData({
-      inviteText:"点右边的，别点我！"
-    });
-    setTimeout(()=>{
-      this.setData({
-        inviteText:"邀请回答"
-      });
-    },800);
+
+    wx.showModal({
+      title: '点击右上角第一个按钮进行分享',
+      showCancel:false
+    })
   },
 
   addTap:function(){

@@ -88,7 +88,14 @@ Page({
             context:res.value
           },
           success:function(res){
-            wx.navigateBack();
+            wx.showToast({
+              title: '发表成功',
+            });
+            setTimeout(() => {
+              wx.navigateBack({
+
+              });
+            }, 750);
           },
           fail:function(reason){
             console.log(reason);

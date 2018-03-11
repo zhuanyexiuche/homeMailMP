@@ -15,7 +15,8 @@
   padding-bottom: 10rpx;
 }
 .responseItem{
-  padding:25rpx;
+  padding:20rpx;
+  padding-right:10rpx;
   margin: 10rpx;
   background-color:#fdfdfd;
   font-family:Courier New, Courier, monospace;
@@ -45,6 +46,8 @@ font-family:Courier New, Courier, monospace;}
 .buttonView{
   background-color: #fdfdfd;
   display: flex;
+  align-items: center;
+  padding-bottom: 10px;
 }
 .image{
   height:50rpx;
@@ -53,18 +56,24 @@ font-family:Courier New, Courier, monospace;}
 }
 
 .imageIcon{
-  height:35rpx;
-  width:35rpx;
+
+  height:40rpx;
+  width:40rpx;
 }
 
 .btn{
-  background-color: transparent;
+   /* flex:1;  */
+   padding-left:80rpx;
+   padding-right:80rpx;
+  display:flex;
+   background-color: transparent; 
   -webkit-text-fill-color: skyblue;
-  width: 200px;
-  text-align: center;
-  height: 30px;
-  font-size: 13px;
-  border-radius: -1em;
+    /* text-align: center;  */
+  align-items: center; 
+  height: 70rpx;
+  width:fit-content;
+  font-size: 35rpx;
+  /* background-color: red; */
 }
 .folder{
   margin: 0rpx;

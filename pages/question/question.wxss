@@ -1,8 +1,8 @@
 .title {
-  margin: 5px;
-  border:  1.5px solid rgba(135, 206, 235, 0.3);
+  margin: 10rpx;
+  border:  2px solid rgba(135, 206, 235, 0.3);
   border-radius: 5px;
-  font-size: 13px;
+  font-size: x-large;
   padding: 2px;
 }
 

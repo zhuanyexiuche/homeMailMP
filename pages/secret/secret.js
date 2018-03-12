@@ -8,7 +8,8 @@ Page({
   data: {
     secretID:null,
     secret:null,
-    comment:null
+    comment:null,
+    color:null,
   },
   refresh:function(succ){
     this.setData({
@@ -35,6 +36,9 @@ Page({
         SID:app.globalData.chatID
       },
       success:function(res){
+        for (let i = 0; i < res.data.length; i++) {
+          res.data[i].rand = Math.floor(Math.random() * 8);
+        }
         that.setData({
           comment:res.data
         });
@@ -50,6 +54,10 @@ Page({
    */
   onLoad: function (options) {
     this.refresh();
+    console.log(options);
+    this.setData({
+      color:options.color
+    });
   },
 
   /**

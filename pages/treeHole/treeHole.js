@@ -87,5 +87,10 @@ Page({
   itemTap: function (e) {
     app.globalData.chatID = e.currentTarget.id;
 
+  },
+  writeTap:function(e){
+    wx.navigateTo({
+      url: '../comment/comment?defaultText=请输入秘密内容',
+    });
   }
 })

@@ -1,6 +1,6 @@
 <view>
   <view width='700rpx' class = "top">
-  <textarea id = "text" placeholder='回答...' class="comment " auto-height='true' maxlength='{{maxWord}}' bindinput='textInput' bindfocus='textFocus' bindblur='textBlur' ></textarea>
+  <textarea id = "text" placeholder='{{defaultText}}...' class="comment " auto-height='true' maxlength='{{maxWord}}' bindinput='textInput' bindfocus='textFocus' bindblur='textBlur' ></textarea>
   <view class ="restWord">还可以输入{{restWord}}字</view>
   </view>
   

@@ -1,12 +1,12 @@
 <!--pages/treeHole/treeHole.wxml-->
 <view>
   <text class='title'>- Tree Hole -</text>
-  <button class='change'>
+  <button class='change' bindtap='writeTap'>
       <image src="../../resource/images/write.png" class = "imageIcon"></image>说个小秘密</button>
 </view>
 <view class='treeHoleList'>
   <block wx:for="{{treeHoleList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
-    <navigator id = "{{item.ID}}" url = "../secret/secret" bindtap='itemTap' class = "content_blue {{index%2==0?'content_yellow':''}}">
+    <navigator id = "{{item.ID}}" url = "../secret/secret?color={{index%2}}" bindtap='itemTap' class = "content_blue {{index%2==0?'content_yellow':''}}">
       <view>{{item.briefContext}}</view>
     </navigator>
   </block>

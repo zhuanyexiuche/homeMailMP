@@ -9,14 +9,22 @@ Page({
     confirmText:"提交",
     maxWord :512,
     restWord : 512,
-    focus:false
+    focus:false,
+    defaultText:"回答",
+    secret:false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(options);
+    if (options.defaultText){
+      this.setData({
+        defaultText:options.defaultText,
+        secret:true
+      });
+    }
   },
 
   /**
@@ -69,6 +77,7 @@ Page({
   },
 
   confirm:function(e){
+    let that = this;
     console.log('confirm');
     wx.createSelectorQuery().select('#text').fields({
       properties:['value']
@@ -76,42 +85,70 @@ Page({
       console.log(res.value);
       if(res.value==""){
         wx.showModal({
-          title: '回复内容不可以为空',
-          content: '请输入回复内容',
+          title: that.data.secret?'秘密内容不可以为空':'回复内容不可以为空',
+          content: that.data.secret?'请输入秘密内容':'请输入回复内容',
           showCancel:false
         });
         return;
       }
       console.log(app.globalData.userInfo);
+      //发表秘密回复||秘密
       if (app.globalData.isSecret){
-        wx.request({
-          url: app.globalData.serverUrl + '/writeSecretComment',
-          data: {
-            SID:app.globalData.chatID,
-            context:res.value
-          },
-          success: function (res) {
-            console.log(res);
-            if (res.data == 'fail') {
-              console.log("数据库访问出错");
-            } else {
-              console.log(res);
+        if(that.data.secret){
+          //发表秘密
+          wx.request({
+            url: app.globalData.serverUrl+'/writeSecret',
+            data:{
+              context:res.value
+            },
+            success:function(res){
               wx.showToast({
                 title: '发表成功',
+                duration:750
               });
-              setTimeout(() => {
+              setTimeout(()=>{
                 wx.navigateBack({
-
+                  
                 });
-              }, 750);
-              
+              },750);
+            },
+            fail:function(res){
+              console.log(res);
             }
-          },
-          fail: function (reason) {
-            console.log(reason);
-          }
-        });
+          })
+        }else{
+          //发表秘密回复
+          wx.request({
+            url: app.globalData.serverUrl + '/writeSecretComment',
+            data: {
+              SID: app.globalData.chatID,
+              context: res.value
+            },
+            success: function (res) {
+              console.log(res);
+              if (res.data == 'fail') {
+                console.log("数据库访问出错");
+              } else {
+                console.log(res);
+                wx.showToast({
+                  title: '发表成功',
+                });
+                setTimeout(() => {
+                  wx.navigateBack({
+
+                  });
+                }, 750);
+
+              }
+            },
+            fail: function (reason) {
+              console.log(reason);
+            }
+          });
+        }
+        
       }else{
+        //发表聊天回复
         wx.request({
           url: app.globalData.serverUrl + '/writeResponse',
           data: {

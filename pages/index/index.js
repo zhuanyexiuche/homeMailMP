@@ -52,18 +52,15 @@ Page({
       }
     })
   },
-  temp:function(){
-    this.getQuestion(wx.stopPullDownRefresh());
-  },
   onLoad: function () {
-    app.globalData.isSecret = false;
     this.getQuestion();
   },
   onShow:function(){
+    app.globalData.isSecret = false;
     this.getQuestion();
   },
   onPullDownRefresh:function(){
-    setTimeout(this.temp,200);
+    this.getQuestion(wx.stopPullDownRefresh());
   },
   itemTap:function(e){
     app.globalData.chatID=e.currentTarget.id;

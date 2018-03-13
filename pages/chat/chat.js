@@ -30,6 +30,13 @@ Page({
       success: function (res) {
         console.log(res);
         let temp = res.data.context;
+        try{
+          let a = res.data.context.length;
+
+        }catch(e){
+          console.error(res);
+        }
+        // throw("hahaha");
         if (res.data.context.length>24){
           that.setData({
             needToFold:true,
@@ -59,11 +66,11 @@ Page({
       success: function (res) {
         console.log(res.data);
         that.setData({
-          respInfo: res.data.map(function(curVal){
+          respInfo: res.data/*.map(function(curVal){
             let temp = curVal;
             temp.briefContent = temp.briefContent.replace("\\n","\n\r");
             return temp;
-          })
+          })*/
         });
         if (suc){
           suc();

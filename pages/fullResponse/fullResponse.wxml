@@ -1,9 +1,10 @@
 <!--pages/fullResponse/fullResponse.wxml-->
-<view class = "chatList">
+<view class = "chatList content_blue {{color==0?'content_yellow':''}} content">
   <view class = "chatTopic">{{topic}}</view>
   <view class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}  </view>
   <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
-  <view class = "responseItem">
+  <view class = 'underline'></view>
+  <view class = "responseItem item2">
     <view class = "header">
       <view class = "responseHead responseHead2">
         <image src="{{response.avatarUrl}}" class = "image"></image>

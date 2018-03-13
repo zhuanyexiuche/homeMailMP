@@ -112,5 +112,11 @@ Page({
     wx.navigateTo({
       url: '../comment/comment'
     })
+  },
+  shareTap:function(){
+    wx.showModal({
+      title: '点击右上角第一个按钮进行分享',
+      showCancel: false,
+    });
   }
 })

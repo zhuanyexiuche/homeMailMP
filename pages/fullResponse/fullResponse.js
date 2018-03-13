@@ -14,6 +14,7 @@ Page({
     needToFold:false,
     folded:true,
     foldedContext:null,
+    color:null,
   },
   refresh:function(){
     let that = this;
@@ -24,6 +25,7 @@ Page({
         RID: app.globalData.responseID
       },
       success: function (res) {
+        console.log(res);
         that.setData({
           response: res.data,
           belongToMe: (res.data.WXID === app.globalData.open_id)
@@ -63,7 +65,8 @@ Page({
     }
     this.setData({
       topic:app.globalData.topic,
-      context:app.globalData.context
+      context:app.globalData.context,
+      color:options.color
     });
     this.refresh();
   },

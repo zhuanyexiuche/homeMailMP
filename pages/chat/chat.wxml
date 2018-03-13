@@ -12,7 +12,7 @@
   </view>
   <view class  = 'underline'></view>
   <block wx:for="{{respInfo}}" wx:for-item="item" wx:for-index="index" wx:key="item.ID">
-    <navigator id = "{{item.ID}}" url='../fullResponse/fullResponse' class = "responseItem" bindtap='fullResponseTap'>
+    <navigator id = "{{item.ID}}" url='../fullResponse/fullResponse?color={{color}}' class = "responseItem" bindtap='fullResponseTap'>
       <view class = "responseHead">
         <image src="{{item.avatarUrl}}" class = "image"></image>
         <view>{{item.WXNickName}}:</view>

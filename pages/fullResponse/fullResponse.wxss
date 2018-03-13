@@ -3,14 +3,16 @@
 @import "../common/weui.wxss";
 @import "../chat/chat.wxss";
 .fullresponseContent{
-  padding:30rpx; 
+  padding:25rpx; 
 }
 .header{
   display: inline-flex;
   justify-content: space-between;
   height:auto;
 }
-
+.item2{
+  min-height:400px;
+}
 .buttonView{
   display: inline-flex;
   width:auto;
@@ -24,8 +26,8 @@
   -webkit-text-fill-color: grey;
   background-color: transparent;
   align-items:center;
-  padding-left:35rpx;
-   padding-right:35rpx;
+  padding-left:30rpx;
+   padding-right:30rpx;
    display:none; 
 }
 
@@ -41,10 +43,10 @@
 
   align-items:center;
   /* text-align: center; */
-  padding-left:35rpx;
-   padding-right:35rpx;
+  padding-left:30rpx;
+   padding-right:30rpx;
    display:flex; 
-   margin-right:10rpx;
+   margin-right:8rpx;
 
 }
 .supported{
@@ -52,6 +54,30 @@
   background-color: rgba(128, 128, 128, 0.5);
 }
 .responseHead2{
-  width:425rpx;
+  width:400rpx;
   /* background-color:red; */
+}
+.content_blue{
+  padding: 5px;
+  background: rgba(135, 206, 235, 0.1);
+  box-shadow: 1px 1px 1px 1px rgb(135, 206, 235);
+  margin: 10px;
+  border-radius: 6px;
+  height: auto;
+}
+
+.content_yellow{
+  background: rgba(255, 234, 214, 0.2);
+  box-shadow: 1px 1px 1px 1px rgb(255, 234, 214);
+}
+.content{
+  margin:5px;
+  padding:5px;
+  border-radius:30px;
+
+}
+.underline{
+  background-color:rgba(128,128,128,0.5);
+  height:2px;
+  margin: 5px;
 }

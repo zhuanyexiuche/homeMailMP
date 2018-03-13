@@ -19,7 +19,7 @@
   padding:20rpx;
   padding-right:10rpx;
   margin: 10rpx;
-  background-color:#fdfdfd;
+  background-color:rgba(255,255,255,0.9);
   font-family:Courier New, Courier, monospace;
   border-radius: 20rpx;
   box-shadow: 1px 1px 1px 1px grey;
@@ -28,21 +28,21 @@
   font-size: small;
   display: inline-flex;
   width: 545rpx;
-  background-color:#fdfdfd;
+  background-color:transparent;
   font-family:Courier New, Courier, monospace;
 }
 .responseContent{
   font-size: medium;
   padding-top:5rpx;
   padding-bottom: 5rpx;
-    background-color:#fdfdfd;
+    background-color:transparent;
   height: auto;
   white-space: pre-wrap;
   font-family:Courier New, Courier, monospace;
 }
 .responseBottom{
   font-size:xx-small;
-  background-color:#fdfdfd;
+  background-color:transparent;
 font-family:Courier New, Courier, monospace;}
 .buttonView{
   /* background-color: #fdfdfd; */
@@ -95,7 +95,7 @@ font-family:Courier New, Courier, monospace;}
 }
 
 .content_yellow{
-  background: rgba(255, 234, 214, 0.1);
+  background: rgba(255, 234, 214, 0.2);
   box-shadow: 1px 1px 1px 1px rgb(255, 234, 214);
 }
 .content{

@@ -1,15 +1,16 @@
 <!--pages/chat/chat.wxml-->
-<view class = "chatList">
+<view class = "chatList content_blue {{color==0?'content_yellow':''}} content">
   <view id = "Topic" class = "chatTopic">{{chatInfo.topic}}</view>
   <view id = "TopicContext" class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}</view>
   <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
+  <view class  = 'underline'></view>
   <view class = "buttonView">
     <button bindtap='inviteTap' class='btn'>
       <image src="../../resource/images/plus.png" class = "imageIcon"></image>{{inviteText}}</button>
     <button bindtap='addTap' class='btn'>
       <image src="../../resource/images/write.png" class = "imageIcon"></image>{{addText}}</button>
   </view>
-  
+  <view class  = 'underline'></view>
   <block wx:for="{{respInfo}}" wx:for-item="item" wx:for-index="index" wx:key="item.ID">
     <navigator id = "{{item.ID}}" url='../fullResponse/fullResponse' class = "responseItem" bindtap='fullResponseTap'>
       <view class = "responseHead">

@@ -27,7 +27,14 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "chat优化",
+					"pathName": "pages/chat/chat",
+					"query": ""
+				}
+			]
 		}
 	}
 }

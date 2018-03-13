@@ -15,7 +15,8 @@ Page({
     foldedContext:null,
     needToFold:false,
     folded:true,
-    showContext:null
+    showContext:null,
+    color:null
   },
   refresh:function(success){
     let that = this;
@@ -82,6 +83,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       chatID:app.globalData.chatID,
+      color:options.color
     });
     this.refresh();
     this.data.folded=true;

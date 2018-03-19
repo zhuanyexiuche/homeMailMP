@@ -1,20 +1,21 @@
 <!--index.wxml-->
 <view class = "chatList">
-  <view class='search'>
-    <view class='inputQView'>
-      <view class = 'block'></view>
-      <input id = "search" placeholder='输入话题' class='qustionInput'></input>
-    </view>
+  <image src="../../resource/images/background.png"></image>
+   <view class='search'> 
+     <view class='inputQView'> 
+        <view class = 'block'></view>  
+       <input id = "search" placeholder='输入话题' class='qustionInput'></input> 
+     </view> 
     <view class='btnView'>
-      <button class='qAndSBtn' bindtap='searchTap'>
+      <button class='searchBtn' bindtap='searchTap'>
         <image src="../../resource/images/search.png" class = "imageIcon"></image>
       </button>
-      <button class='qAndSBtn' bindtap='addQTap'>
+      <button class='writeBtn' bindtap='addQTap'>
         <image src="../../resource/images/write.png" class = "imageIcon"></image></button>
     </view>    
   </view>
   <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
-    <navigator id = "{{item.ID}}" url = "../chat/chat?color={{index%2}}" class = "item_blue {{index%2==0?'item_yellow':''}}" bindtap='itemTap'>
+    <navigator id = "{{item.ID}}" url = "../chat/chat?color={{index%2}}" class = "item {{index==0?'item_first':''}}" bindtap='itemTap'>
       <view class = "chatItemTitle">
         {{item.topic}}
       </view>

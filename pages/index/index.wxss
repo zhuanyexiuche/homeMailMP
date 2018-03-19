@@ -1,20 +1,19 @@
 /**index.wxss**/
 @import '../common/weui.wxss';
+
 .chatList{
-  background-color: white;
+  background-color: gainsboro;
   min-height: 1400rpx;
 }
-.item_blue{
-  background-color: rgba(135, 206, 235, 0.1);
-  box-shadow: 1px 1px 1px 1px rgb(135, 206, 235);
-  margin: 20rpx;
-  border-radius: 40rpx;
+.item{
+  background-color: white;
+  box-shadow: 1px 5px 3px 2px darkgray;
+  margin: 40rpx 10rpx;
   height:auto;
   font-family:Courier New, Courier, monospace;
 }
-.item_yellow{
-  background-color: rgba(255, 234, 214, 0.2);
-  box-shadow: 1px 1px 1px 1px rgb(255, 234, 214);
+.item_first {
+  margin-top: 10rpx;
 }
 .chatItemText{
   text-align: center;
@@ -29,8 +28,10 @@
 }
 
 .imageIcon{
-  height:30rpx;
-  width:30rpx;
+  margin-top: 40rpx;
+  margin-left: 5rpx;
+  height:100rpx;
+  width:100rpx;
 }
 
 .search{
@@ -39,13 +40,24 @@
   display: flex;
 }
 
-.qAndSBtn{
-  width: 100%;
-  height: 40px;
-  background-color: #fcfcfc;
-  -webkit-text-fill-color: skyblue;
-  font-size: 16px;
-  display: inline-block;
+.writeBtn{
+  position: fixed;
+  width: 165rpx;
+  height: 165rpx;
+  top: 875rpx;
+  right: 20rpx;
+  background-color: rgb(59, 133, 135);
+  border-radius: 5em;
+}
+
+.searchBtn {
+  position: fixed;
+  width: 165rpx;
+  height: 165rpx;
+  top: 700rpx;
+  right: 20rpx;
+  background-color: darkgray;
+  border-radius: 5em;
 }
 
 .questionInput{
@@ -56,20 +68,17 @@
 .inputQView{
   background-color: #fcfcfc;
   display: flex;
-  width:500rpx;
-  height:inherit;
-  border:  2px solid rgba(135, 206, 235, 0.3);
-  border-radius: 15px;
-  margin-left: 5px;
-  margin-top: 2px;
-  font-size: 20px;
-  align-items: center;
-  box-shadow: 1px 1px 0 1px rgb(135, 206, 235);
+  width: 800rpx;
+  height: 65rpx;
+  border:  2px solid rgba(59, 133, 135, 0.3);
+  border-radius: 10px;
+  margin-left: 15%;
+  font-size: 16px;
 }
 
-.block{
+ .block{
   width:20rpx;
-}
+} 
 .btnView{
   width: 110px;
   display: flex;

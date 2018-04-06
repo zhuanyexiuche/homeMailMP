@@ -68,11 +68,11 @@
 .inputQView{
   background-color: #fcfcfc;
   display: flex;
-  width: 800rpx;
+  width: 1000rpx;
   height: 65rpx;
   border:  2px solid rgba(59, 133, 135, 0.3);
   border-radius: 10px;
-  margin-left: 15%;
+  margin-left: 10%;
   font-size: 16px;
 }
 

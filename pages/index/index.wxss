@@ -5,6 +5,7 @@
   background-color: gainsboro;
   min-height: 1400rpx;
 }
+
 .item{
   background-color: white;
   box-shadow: 1px 5px 3px 2px darkgray;
@@ -82,4 +83,7 @@
 .btnView{
   width: 110px;
   display: flex;
+}
+.image-top{
+  width:100%;
 }

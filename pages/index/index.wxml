@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class = "chatList">
-  <image src="../../resource/images/background.png"></image>
+  <image src="../../resource/images/background.png" mode="widthFix" class = "image-top"></image>
    <view class='search'> 
      <view class='inputQView'> 
         <view class = 'block'></view>  

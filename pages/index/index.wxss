@@ -67,11 +67,14 @@
 }
 
 .inputQView{
-  background-color: #fcfcfc;
+  background-color: transparent;
   display: flex;
   width: 1000rpx;
   height: 65rpx;
-  border:  2px solid rgba(59, 133, 135, 0.3);
+  border:  2px solid rgb(59, 133, 135);
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
   border-radius: 10px;
   margin-left: 10%;
   font-size: 16px;

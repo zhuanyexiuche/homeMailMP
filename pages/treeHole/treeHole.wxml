@@ -1,8 +1,7 @@
 <!--pages/treeHole/treeHole.wxml-->
 <view>
   <text class='title'>- Tree Hole -</text>
-  <button class='change' bindtap='writeTap'>
-      <image src="../../resource/images/write.png" class = "imageIcon"></image>说个小秘密</button>
+  <button class='change' bindtap='writeTap'>说个小秘密</button>
 </view>
 <view class='treeHoleList'>
   <block wx:for="{{treeHoleList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">

@@ -1,24 +1,35 @@
 .title {
-  margin: 10rpx;
-  border:  2px solid rgba(135, 206, 235, 0.3);
-  border-radius: 5px;
-  font-size: x-large;
-  padding: 2px;
+  margin: 35rpx;
+  border:  2px solid grey;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  padding: 20rpx;
+  font-size: 14px;
 }
 
 .detail{
-  margin: 15px;
-  padding: 10px;
-  border-radius: 5px;
-  border:  1px solid rgba(128, 128, 128, 0.5);
+  margin: 45rpx;
+  padding: 15rpx;
+  border-color: transparent;
   height: 365px;
 }
 
 .btn{
-  background-color: transparent;
-  width: 115px;
+  background-color: rgb(59, 133, 135);
   text-align: center;
-  height: 32px;
   font-size: 13px;
   align-self: baseline;
+  position: fixed;
+  width: 165rpx;
+  height: 165rpx;
+  right: 300rpx;
+  bottom: 30rpx;
+  border-radius: 5em;
+}
+
+.imageIcon {
+  margin-top: 50rpx;
+  height: 80rpx;
+  width: 100rpx;
 }

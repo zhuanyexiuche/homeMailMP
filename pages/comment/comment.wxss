@@ -1,3 +1,4 @@
+@import '../question/question.wxss';
 .title {
   margin: 10px;
   border-color: black;
@@ -11,14 +12,7 @@
 .comment-focus{
   min-height: unset;
 }
-.btn{
-  background-color: transparent;
-  width: 95px;
-  text-align: center;
-  height: 32px;
-  font-size: 14px;
-  align-self: baseline; 
-}
+
 .top{
   margin:20rpx;
   border:  2px solid rgba(128, 128, 128, 0.5);

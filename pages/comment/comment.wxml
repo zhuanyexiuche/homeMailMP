@@ -3,6 +3,7 @@
   <textarea id = "text" placeholder='{{defaultText}}...' class="comment " auto-height='true' maxlength='{{maxWord}}' bindinput='textInput' bindfocus='textFocus' bindblur='textBlur' ></textarea>
   <view class ="restWord">还可以输入{{restWord}}字</view>
   </view>
-  
-  <button bindtap='confirm' class='btn'>{{confirmText}}</button>
+  <button bindtap='confirm' class='btn'>
+    <image src="../../resource/images/done.png" class='imageIcon'></image>
+  </button>
 </view>

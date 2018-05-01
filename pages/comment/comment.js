@@ -86,7 +86,7 @@ Page({
       if(res.value==""){
         wx.showModal({
           title: that.data.secret?'秘密内容不可以为空':'回复内容不可以为空',
-          content: that.data.secret?'请输入秘密内容':'请输入回复内容',
+          content: that.data.secret?'写下你的秘密':'请输入回复内容',
           showCancel:false
         });
         return;

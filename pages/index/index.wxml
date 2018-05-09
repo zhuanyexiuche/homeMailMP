@@ -1,32 +1,40 @@
 <!--index.wxml-->
-<view class = "chatList">
-  <image src="../../resource/images/background.png" mode="widthFix" class = "image-top"></image>
-   <view class='search'> 
-     <view class='inputQView'> 
+  <view class='head'>
+    <image src="../../resource/images/background.png" mode="widthFix" class='image_top'></image>
+    <image src="{{userInfo.avatarUrl}}" class = "user"></image>
+    <text class='wxName'>{{userInfo.nickName}}</text>
+    <label class='news'>全部消息 00</label>
+    <view class='line'></view>
+    <view class='inputQView'> 
         <view class = 'block'></view>  
-       <input id = "search" placeholder='输入话题' class='qustionInput'></input> 
-     </view> 
-    <view class='btnView'>
-      <button class='searchBtn' bindtap='searchTap'>
-        <image src="../../resource/images/search.png" class = "imageIcon"></image>
-      </button>
-      <button class='writeBtn' bindtap='addQTap'>
-        <image src="../../resource/images/write.png" class = "imageIcon"></image></button>
-    </view>    
+      <input id = "search" placeholder='搜索感兴趣的内容' class='qustionInput'></input>
+      <!-- <button class='searchBtn' bindtap='searchTap'>
+             <image src="../../resource/images/search.png" class = "searchIcon"></image>
+      </button>  -->
+    </view> 
+  </view>    
+  
+  <view class = "chatList">
+    <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
+      <navigator id = "{{item.ID}}" url = "../chat/chat?color={{index%2}}" class = "item {{index==0?'item_first':''}}" bindtap='itemTap'>
+        <view class = "chatItemTitle">
+          {{item.topic}}
+        </view>
+        <view class='line' style='margin: -20rpx 40rpx 0'></view>
+        <text class='preview'>{{item.briefContext}}</text>
+        <view style='margin-left: 425rpx; margin-bottom: 25rpx;'>
+          <view class = "chatItemText">
+            <image src='../../resource/images/wechatHL.png' class='answer'></image>
+            <text>{{item.respCount}}</text>
+            <image src='../../resource/images/support.png' class='answer'></image>
+            <text>{{item.clapCount}}</text>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
-  <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
-    <navigator id = "{{item.ID}}" url = "../chat/chat?color={{index%2}}" class = "item {{index==0?'item_first':''}}" bindtap='itemTap'>
-      <view class = "chatItemTitle">
-        {{item.topic}}
-      </view>
-      <view class = "chatItemText">
-        <view class = "chatItemText">
-          回复量：{{item.respCount}}
-        </view>
-        <view class = "chatItemText">
-          点赞量：{{item.clapCount}}
-        </view>
-      </view>
-    </navigator>
-  </block>
-</view>
+
+  <view class='btnView'>
+      <button class='writeBtn' bindtap='addQTap'>
+        <image src="../../resource/images/write.png" class = "writeIcon"></image></button>
+    </view>

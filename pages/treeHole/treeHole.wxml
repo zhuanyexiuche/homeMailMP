@@ -1,5 +1,6 @@
 <!--pages/treeHole/treeHole.wxml-->
 <view>
+  <image src='../../resource/images/head.png' mode='widthFix'></image>
   <text class='title'>- Tree Hole -</text>
   <button class='change' bindtap='writeTap'>说个小秘密</button>
 </view>

@@ -1,64 +1,49 @@
 /**index.wxss**/
 @import '../common/weui.wxss';
-
-.chatList{
-  background-color: gainsboro;
-  min-height: 1400rpx;
+page{
+  background-color: rgb(245, 245, 245)
 }
-
-.item{
-  background-color: white;
-  box-shadow: 1px 5px 3px 2px darkgray;
-  margin: 40rpx 10rpx;
-  height:auto;
-  font-family:Courier New, Courier, monospace;
+.head{
+  width: 100%;
+  position: absolute;
 }
-.item_first {
-  margin-top: 10rpx;
+.image_top{
+  width: 100%;
 }
-.chatItemText{
-  text-align: center;
-  font-size: smaller;
-  display: flex;
-  padding:15rpx;
-  flex:1;
+.line{
+  height: 3rpx;
+  background: gainsboro;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 50rpx;
 }
-.chatItemTitle{
-  font-size: larger;
-  padding:30rpx;
+.writeIcon{
+  margin-top: 35rpx;
+  height:58rpx;
+  width:68rpx;
 }
-
-.imageIcon{
-  margin-top: 40rpx;
-  margin-left: 5rpx;
-  height:100rpx;
-  width:100rpx;
+.searchIcon{
+  width:40rpx; 
+  height:40rpx;
 }
-
-.search{
-  border-radius: 15rpx;
-  height: auto;
-  display: flex;
-}
-
 .writeBtn{
   position: fixed;
-  width: 165rpx;
-  height: 165rpx;
+  width: 125rpx;
+  height: 125rpx;
   top: 875rpx;
-  right: 20rpx;
-  background-color: rgb(59, 133, 135);
-  border-radius: 5em;
+  right: 30rpx;
+  background-color: rgb(137, 224, 214);
+  border-radius: 10em;
+  border-color: transparent
 }
-
 .searchBtn {
-  position: fixed;
-  width: 165rpx;
-  height: 165rpx;
-  top: 700rpx;
-  right: 20rpx;
-  background-color: darkgray;
-  border-radius: 5em;
+  position: absolute;
+  width: 45rpx;
+  height: 50rpx;
+  top: 23rpx;
+  right: 65rpx;
+  background: transparent;
+  border-color: rgb(255, 255, 255);
 }
 
 .questionInput{
@@ -67,19 +52,17 @@
 }
 
 .inputQView{
-  background-color: transparent;
-  display: flex;
-  width: 1000rpx;
+  top: 10rpx;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 665rpx;
   height: 65rpx;
-  border:  2px solid rgb(59, 133, 135);
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
   border-radius: 10px;
-  margin-left: 10%;
-  font-size: 16px;
+  margin-left: 40rpx;
+  font-size: 15px;
+  padding-top: 5rpx;
+  text-align: center;
 }
-
  .block{
   width:20rpx;
 } 
@@ -87,6 +70,61 @@
   width: 110px;
   display: flex;
 }
-.image-top{
-  width:100%;
+
+.user{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10em;
+  position: absolute;
+  top: 260rpx;
+  left: 25rpx;
+}
+.wxName{
+  position: absolute;
+  top: 300rpx;
+  left: 240rpx;
+  color: white;
+  font-size: 16px;
+}
+.news{
+  position: absolute;
+  font-size: 13px;
+  top: 370rpx;
+  left: 240rpx;
+  color: rgb(86, 147, 149);
+}
+.chatList{
+  min-height: 1400rpx; 
+  margin-top: 450rpx;
+  position: absolute;
+}
+.item{
+  background-color: white;
+  border-radius: 0.3em;
+  border: solid 1px gainsboro;
+  margin: 30rpx 20rpx;
+  height:auto;
+  font-family:Courier New, Courier, monospace;
+}
+.item_first {
+  margin-top: 10rpx;
+}
+.chatItemText{
+  font-size: smaller;
+  display: flex;
+  right: 100rpx;
+}
+.chatItemTitle{
+  font-size: larger;
+  padding:30rpx 40rpx;
+}
+.preview{
+  font-size: 12px;
+  margin: 30rpx;
+  color: darkgray
+}
+.answer{
+  width: 45rpx;
+  height: 40rpx;
+  margin: 10rpx 25rpx;
 }

@@ -4,7 +4,16 @@ const app = getApp();
 
 Page({
   data: {
-    chatList:[]
+    chatList:[],
+    userInfo: {
+      avatarUrl: "", 
+      nickName: "",
+    }
+  },
+  add_address_fun: function () {
+    wx.navigateTo({
+      url: 'add_address/add_address',
+    })
   },
   getQuestion:function(success){
     let that = this;
@@ -23,6 +32,7 @@ Page({
           that.setData({
             chatList: res.data
           });
+          console.log(res);
         },
         fail: function (reason) {
           console.log(reason);
@@ -39,7 +49,6 @@ Page({
         brief: true
       },
       success: function (res) {
-        console.log(res.data);
         that.setData({
           chatList: res.data
         });
@@ -54,6 +63,17 @@ Page({
   },
   onLoad: function () {
     this.getQuestion();
+    var that = this;
+    wx.getUserInfo({
+      success: function (res) {
+        var avatarUrl = 'userInfo.avatarUrl';
+        var nickName = 'userInfo.nickName';
+        that.setData({
+          [avatarUrl]: res.userInfo.avatarUrl,
+          [nickName]: res.userInfo.nickName,
+        })
+      }
+    })  
   },
   onShow:function(){
     app.globalData.isSecret = false;
@@ -64,7 +84,6 @@ Page({
   },
   itemTap:function(e){
     app.globalData.chatID=e.currentTarget.id;
-    console.log(app.globalData.chatID);
   },
   addQTap:function(e){
     wx.navigateTo({

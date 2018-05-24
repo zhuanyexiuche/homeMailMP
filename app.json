@@ -11,7 +11,7 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#000000",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "家书",
     "enablePullDownRefresh": true,

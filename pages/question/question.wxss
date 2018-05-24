@@ -16,7 +16,7 @@
 }
 
 .btn{
-  background-color: rgb(59, 133, 135);
+  background-color: rgb(137, 224, 214);
   text-align: center;
   font-size: 13px;
   align-self: baseline;

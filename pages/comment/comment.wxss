@@ -3,7 +3,9 @@
   margin: 10px;
   border-color: black;
 }
-
+.head{
+  height: 50rpx;
+}
 .comment{
   border-color: black;
   min-height: 365px; 

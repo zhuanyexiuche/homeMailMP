@@ -3,22 +3,8 @@
 @import "../index/index.wxss";
 
 .treeHoleList{
-  background-color: white;
+  background-color: transparent;
   height:auto;
-}
-
-.content_blue{
-  padding: 10px;
-  background: rgba(135, 206, 235, 0.1);
-  box-shadow: 1px 1px 1px 1px rgb(135, 206, 235);
-  margin: 10px;
-  border-radius: 6px;
-  height: auto;
-}
-
-.content_yellow{
-  background: rgba(255, 234, 214, 0.2);
-  box-shadow: 1px 1px 1px 1px rgb(255, 234, 214);
 }
 
 .imageIcon{
@@ -27,4 +13,20 @@
   margin:10px;
   margin-right:6px;
   margin-left:10px;
+}
+
+.item{
+  background-color: white;
+  border-radius: 0.3em;
+  border: solid 1px gainsboro;
+  margin: 30rpx 20rpx;
+  height:auto;
+  font-family:Courier New, Courier, monospace;
+}
+.item_first {
+  margin-top: 10rpx;
+}
+
+.back {
+  position:absolute;
 }

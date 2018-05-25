@@ -1,11 +1,11 @@
 <!--pages/treeHole/treeHole.wxml-->
     <view>
       <image src='../../resource/images/head.png' mode='widthFix'></image>
-      <image src='../../resource/images/secretBack.jpeg' mode='widthFix'></image>
+      <image src='../../resource/images/secretBack.png' class='back' mode='widthFix'></image>
     </view>
     <view class='treeHoleList'>
       <block wx:for="{{treeHoleList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
-        <navigator id = "{{item.ID}}" url = "../secret/secret?color={{index%2}}" bindtap='itemTap' class = "item {{index==0?'item_first':''}}">
+        <navigator id = "{{item.ID}}" url = "../secret/secret?color={{index%2}}" class = "item {{index==0?'item_first':''}}">
           <view class = "chatItemText">
             <text>{{item.briefContext}}</text>
             <view class='line' style='margin: -20rpx 40rpx 0'></view>

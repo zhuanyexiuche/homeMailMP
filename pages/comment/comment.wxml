@@ -1,10 +1,14 @@
 <view>
-  <view width='700rpx' class = "top">
-  <view class='head'></view>
-  <textarea id = "text" placeholder='{{defaultText}}...' class="comment " auto-height='true' maxlength='{{maxWord}}' bindinput='textInput' bindfocus='textFocus' bindblur='textBlur' ></textarea>
-  <view class ="restWord">还可以输入{{restWord}}字</view>
+  <view width='700rpx' class="top">
+    <view class='head'>
+      <image src="../../resource/images/niming1.jpg" class = "user"></image>
+      <text class='name'>随机名字</text>
+      <!-- <text class='mind'>#在这里写下你的心情吧#</text> -->
+    </view>
+    <textarea id = "text" placeholder='{{defaultText}}...' class="comment" auto-height='true' maxlength='{{maxWord}}' bindinput='textInput' bindfocus='textFocus' bindblur='textBlur'></textarea>
+    <view class ="restWord">还可以输入{{restWord}}字</view>
   </view>
-  <button bindtap='confirm' class='btn'>
+  <button bindtap='confirm' class='btn' style='bottom: 100rpx'>
     <image src="../../resource/images/done.png" class='imageIcon'></image>
   </button>
 </view>

@@ -1,32 +1,53 @@
 @import '../question/question.wxss';
+
 .title {
-  margin: 10px;
+  margin: 10rpx;
   border-color: black;
 }
 .head{
-  height: 50rpx;
+  height: 150rpx;
+  background-color: rgb(167, 227, 220);
 }
 .comment{
   border-color: black;
-  min-height: 365px; 
+  min-height: 425rpx; 
   width: inherit;
+  padding: 20rpx;
 }
 .comment-focus{
   min-height: unset;
 }
 
 .top{
-  margin:20rpx;
-  border:  2px solid rgba(128, 128, 128, 0.5);
-  border-radius: 20rpx;
-  padding:10rpx;
-  padding-left:15rpx;
+  margin: 20rpx;
+  margin-top: 100rpx;
+  border: solid 1px gainsboro;
 }
+
 .restWord{
-  /* margin:20rpx; */
-  /* padding:10rpx; */
+  position: absolute;
   color: rgba(132, 132, 132,0.9);
-  text-align: center;
-  /* background-color:red; */
-  width: 100%;
+  top: 645rpx;
+  right: 35rpx;
+  font-size: 12px;
+}
+.name{
+  position: absolute;
+  top: 135rpx;
+  left: 240rpx;
+  font-size: 16px;
+}
+.mind{
+  position: absolute;
+  top: 190rpx;
+  left: 220rpx;
+  font-size: 14px;
+}
+.user{
+  width: 135rpx;
+  height: 135rpx;
+  border-radius: 10em;
+  position: absolute;
+  top: 110rpx;
+  left: 30rpx;
 }

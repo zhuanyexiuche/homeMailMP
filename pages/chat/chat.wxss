@@ -1,28 +1,47 @@
 /* pages/chat/chat.wxss */
 @import "../index/index.wxss";
 @import "../common/weui.wxss";
+.chatList{
+  margin: 0;
+  width: 100%;
+}
+.line{
+  height: 3rpx;
+  background: gainsboro;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 0;
+}
 .chatTopic{
   /* background-color: rgba(245,245,245,0.5); */
   background-color: transparent;
-  padding: 20rpx;
-  font-size:larger;
+  padding: 30rpx;
+  font-size:17px;
   font-family:Courier New, Courier, monospace;
 }
 .chatTopicContext{
-  font-size:medium;
+  font-size:14px;
   white-space: pre-wrap;
   font-family:Courier New, Courier, monospace;
   padding-top:10rpx;
   padding-bottom: 10rpx;
+  color: gray;
 }
 .responseItem{
   padding:20rpx;
-  padding-right:10rpx;
-  margin: 10rpx;
-  background-color:rgba(255,255,255,0.9);
-  font-family:Courier New, Courier, monospace;
+  margin: 30rpx;
   border-radius: 20rpx;
-  box-shadow: 1px 1px 1px 1px grey;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  border-color: gainsboro;
+  background-color: white;
+}
+.questionArea{
+  background-color: white;
+  border-radius: 20rpx;
+  box-shadow: 1rpx 1rpx 1rpx 0 gainsboro;
+  border: solid 1px gainsboro;
+  margin: 30rpx 20rpx;
+  height:auto;
 }
 .responseHead{
   font-size: small;
@@ -32,18 +51,15 @@
   font-family:Courier New, Courier, monospace;
 }
 .responseContent{
-  font-size: medium;
-  padding-top:5rpx;
-  padding-bottom: 5rpx;
-    background-color:transparent;
-  height: auto;
-  white-space: pre-wrap;
-  font-family:Courier New, Courier, monospace;
+  font-size: 13px;
+  color: gray;
+  margin-left: 16%;
 }
 .responseBottom{
   font-size:xx-small;
-  background-color:transparent;
-font-family:Courier New, Courier, monospace;}
+  font-family:Courier New, Courier, monospace;
+  margin-left: 75%
+}
 .buttonView{
   /* background-color: #fdfdfd; */
   display: flex;
@@ -51,13 +67,12 @@ font-family:Courier New, Courier, monospace;}
   /* padding-bottom: 10px; */
 }
 .image{
-  height:50rpx;
-  width:50rpx;
-  margin-right: 20rpx;
+  height:85rpx;
+  width:85rpx;
+  border-radius: 5em;
 }
 
 .imageIcon{
-
   height:40rpx;
   width:40rpx;
 }
@@ -79,7 +94,7 @@ font-family:Courier New, Courier, monospace;}
 .folder{
   margin: 0rpx;
   padding:0rpx;
-  font-size:small;
+  font-size:10px;
   text-align: center;
 }
 .hide{
@@ -106,6 +121,15 @@ font-family:Courier New, Courier, monospace;}
 }
 .underline{
   background-color:rgba(128,128,128,0.5);
-  height:2px;
-  margin: 5px;
+  height:3rpx;
+  margin: 15rpx;
+}
+.answer{
+  margin-top:15%;
+  margin-left: 13%;
+}
+.count{
+  position:absolute; 
+  top:17%;
+  color:grey;
 }

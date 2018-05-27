@@ -22,7 +22,7 @@
         </view>
         <view class='line' style='margin: -20rpx 40rpx 0'></view>
         <text class='preview'>{{item.briefContext}}</text>
-        <view style='margin-left: 425rpx; margin-bottom: 25rpx;'>
+        <view style='margin-left: 60%; margin-bottom: 4%;'>
           <view class = "chatItemText">
             <image src='../../resource/images/wechatHL.png' class='answer'></image>
             <text>{{item.respCount}}</text>

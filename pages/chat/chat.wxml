@@ -1,24 +1,35 @@
 <!--pages/chat/chat.wxml-->
-<view class = "chatList content_blue {{color==0?'content_yellow':''}} content">
-  <view id = "Topic" class = "chatTopic">{{chatInfo.topic}}</view>
-  <view id = "TopicContext" class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}</view>
-  <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
-  <view class  = 'underline'></view>
+<text style='position: absolute; top:3%;left:5%'>XXX的提问</text>
+<image src='../../resource/images/head.png' mode='widthFix'></image>
+<view class = "chatList">
+  <view class='questionArea'>
+    <view id = "Topic" class = "chatTopic">{{chatInfo.topic}}</view>
+    <view class  = 'line'></view>
+    <view id = "TopicContext" class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}</view>
+    <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">....</view>
+     <!-- <view style='margin-left: 60%; margin-bottom: 4%'>
+      <image src='../../resource/images/wechatHL.png' class='answer'></image>
+      <text class='count'>{{chatInfo.respCount}}</text>
+      <image src='../../resource/images/support.png' class='answer'></image>
+      <text class='count'>{{chatInfo.clapCount}}</text>
+    </view>  -->
+  </view>
   <view class = "buttonView">
     <button bindtap='inviteTap' class='btn'>
-      <image src="../../resource/images/plus.png" class = "imageIcon"></image>{{inviteText}}</button>
+      {{inviteText}}</button>
     <button bindtap='addTap' class='btn'>
-      <image src="../../resource/images/write.png" class = "imageIcon"></image>{{addText}}</button>
+      {{addText}}</button>
   </view>
   <view class  = 'underline'></view>
   <block wx:for="{{respInfo}}" wx:for-item="item" wx:for-index="index" wx:key="item.ID">
     <navigator id = "{{item.ID}}" url='../fullResponse/fullResponse?color={{color}}' class = "responseItem" bindtap='fullResponseTap'>
       <view class = "responseHead">
         <image src="{{item.avatarUrl}}" class = "image"></image>
-        <view>{{item.WXNickName}}:</view>
+        <view style='margin-left: 3%'>{{item.WXNickName}}:</view>
       </view>
+      <view style='height: 3rpx;background: gainsboro;margin:-35rpx 10rpx 20rpx 100rpx'></view>
       <view class = "responseContent">{{item.briefContent}}</view>
-      <view class = "responseBottom">{{item.clapCount}}赞同</view>
+      <view class = "responseBottom">❤️ {{item.clapCount}}</view>
     </navigator>
   </block>
 </view>

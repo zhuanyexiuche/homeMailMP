@@ -1,20 +1,21 @@
 <!--pages/fullResponse/fullResponse.wxml-->
-<view class = "chatList content_blue {{color==0?'content_yellow':''}} content">
-  <view class = "chatTopic">{{topic}}</view>
+<view class = "chatList">
+  <!-- <view class = "chatTopic">{{topic}}</view>
   <view class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}  </view>
   <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">.....</view>
-  <view class = 'underline'></view>
+  <view class = 'underline'></view> -->
   <view class = "responseItem item2">
     <view class = "header">
       <view class = "responseHead responseHead2">
         <image src="{{response.avatarUrl}}" class = "image"></image>
-        <text>{{response.WXNickName}}:</text>
+        <text style='margin-top:5%; margin-left:5%'>{{response.WXNickName}}:</text>
       </view>
       <view class='buttonView'>
         <button bindtap='supportTap' class="btnn {{supported?'supported':''}}">点赞</button>
         <button bindtap='deleteTap' class="delete {{belongToMe?'deleted':''}}">删除</button>
       </view>
     </view>
+    <view class='underline'></view>
     <view class = "responseContent fullresponseContent">{{response.content}}</view>
   </view>
 </view>

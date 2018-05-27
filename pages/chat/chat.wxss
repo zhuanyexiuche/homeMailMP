@@ -100,25 +100,7 @@
 .hide{
   display: none;
 }
-.content_blue{
-  padding: 10px;
-  background: rgba(135, 206, 235, 0.1);
-  box-shadow: 1px 1px 1px 1px rgb(135, 206, 235);
-  margin: 10px;
-  border-radius: 6px;
-  height: auto;
-}
 
-.content_yellow{
-  background: rgba(255, 234, 214, 0.2);
-  box-shadow: 1px 1px 1px 1px rgb(255, 234, 214);
-}
-.content{
-  margin:5px;
-  padding:5px;
-  border-radius:30px;
-
-}
 .underline{
   background-color:rgba(128,128,128,0.5);
   height:3rpx;

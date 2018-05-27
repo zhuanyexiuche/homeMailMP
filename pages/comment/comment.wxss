@@ -1,5 +1,8 @@
 @import '../question/question.wxss';
 
+page{
+  background-color: rgb(245, 245, 245);
+}
 .title {
   margin: 10rpx;
   border-color: black;
@@ -9,7 +12,6 @@
   background-color: rgb(167, 227, 220);
 }
 .comment{
-  border-color: black;
   min-height: 425rpx; 
   width: inherit;
   padding: 20rpx;
@@ -17,18 +19,22 @@
 .comment-focus{
   min-height: unset;
 }
-
 .top{
   margin: 20rpx;
   margin-top: 100rpx;
-  border: solid 1px gainsboro;
+  width: 700rpx;
 }
-
+.mainContent{
+  background-color: white;
+  border-radius: 20rpx;
+  border: thin solid gainsboro;
+  box-shadow: 1rpx 1rpx 1rpx 0 gainsboro
+}
 .restWord{
   position: absolute;
   color: rgba(132, 132, 132,0.9);
-  top: 645rpx;
-  right: 35rpx;
+  top: 655rpx;
+  right: 45rpx;
   font-size: 12px;
 }
 .name{
@@ -44,10 +50,10 @@
   font-size: 14px;
 }
 .user{
-  width: 135rpx;
-  height: 135rpx;
+  width: 115rpx;
+  height: 115rpx;
   border-radius: 10em;
   position: absolute;
-  top: 110rpx;
-  left: 30rpx;
+  top: 120rpx;
+  left: 40rpx;
 }

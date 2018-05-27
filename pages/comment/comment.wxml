@@ -1,5 +1,5 @@
-<view>
-  <view width='700rpx' class="top">
+<view class="top">
+  <view class='mainContent'>
     <view class='head'>
       <image src="../../resource/images/niming1.jpg" class = "user"></image>
       <text class='name'>随机名字</text>

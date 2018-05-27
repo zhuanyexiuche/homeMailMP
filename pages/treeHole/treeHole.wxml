@@ -1,7 +1,7 @@
 <!--pages/treeHole/treeHole.wxml-->
     <view>
       <image src='../../resource/images/head.png' mode='widthFix'></image>
-      <image src='../../resource/images/secretBack.png' class='back' mode='widthFix'></image>
+       <image src='../../resource/images/secretBack.png' class='back' mode='widthFix'></image> 
     </view>
     <view class='treeHoleList'>
       <block wx:for="{{treeHoleList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">

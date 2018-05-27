@@ -26,7 +26,3 @@
 .item_first {
   margin-top: 10rpx;
 }
-
-.back {
-  position:absolute;
-}

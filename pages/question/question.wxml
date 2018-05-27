@@ -1,9 +1,9 @@
-<view>
+<view style='margin-top:10%'>
   <view class='title'>
     <input id = 'topic' placeholder='请输入标题...'></input>
   </view>
   <view class='detail'>
-    <textarea id= 'text' placeholder='详细描述...'></textarea>
+    <textarea id= 'text' placeholder='请详细描述你的问题...'></textarea>
   </view>
   <button bindtap='confirm' class='btn'>
     <image src="../../resource/images/done.png" class='imageIcon'></image>

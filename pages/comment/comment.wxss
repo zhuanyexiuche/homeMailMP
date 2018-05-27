@@ -14,13 +14,13 @@ page{
 .comment{
   min-height: 425rpx; 
   width: inherit;
-  padding: 20rpx;
+  padding: 35rpx;
 }
 .comment-focus{
   min-height: unset;
 }
 .top{
-  margin: 20rpx;
+  margin: 40rpx;
   margin-top: 100rpx;
   width: 700rpx;
 }
@@ -39,14 +39,14 @@ page{
 }
 .name{
   position: absolute;
-  top: 135rpx;
-  left: 240rpx;
+  top: 11%;
+  left: 30%;
   font-size: 16px;
 }
 .mind{
   position: absolute;
-  top: 190rpx;
-  left: 220rpx;
+  top: 16%;
+  left: 30%;
   font-size: 14px;
 }
 .user{
@@ -54,6 +54,6 @@ page{
   height: 115rpx;
   border-radius: 10em;
   position: absolute;
-  top: 120rpx;
-  left: 40rpx;
+  top: 10%;
+  left: 10%;
 }

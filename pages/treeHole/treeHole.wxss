@@ -2,6 +2,10 @@
 @import '../common/weui.wxss';
 @import "../index/index.wxss";
 
+.back{
+  position: absolute;
+}
+
 .treeHoleList{
   background-color: transparent;
   height:auto;

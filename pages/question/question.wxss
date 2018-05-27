@@ -17,14 +17,11 @@
 
 .btn{
   background-color: rgb(137, 224, 214);
-  text-align: center;
-  font-size: 13px;
-  align-self: baseline;
   position: fixed;
   width: 165rpx;
   height: 165rpx;
-  right: 300rpx;
-  bottom: 30rpx;
+  right: 40%;
+  bottom: 13%;
   border-radius: 5em;
 }
 

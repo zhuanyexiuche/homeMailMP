@@ -30,8 +30,8 @@ page{
   position: fixed;
   width: 125rpx;
   height: 125rpx;
-  top: 875rpx;
-  right: 30rpx;
+  top: 85%;
+  right: 5%;
   background-color: rgb(137, 224, 214);
   border-radius: 10em;
   border-color: transparent
@@ -52,14 +52,14 @@ page{
 }
 
 .inputQView{
-  top: 10rpx;
+  top: 2%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.1);
-  width: 665rpx;
+  width: 90%;
   height: 65rpx;
   border-radius: 10px;
-  margin-left: 40rpx;
-  font-size: 15px;
+  margin-left: 5%;
+  font-size: 13px;
   padding-top: 5rpx;
   text-align: center;
 }
@@ -76,21 +76,21 @@ page{
   height: 160rpx;
   border-radius: 10em;
   position: absolute;
-  top: 260rpx;
-  left: 25rpx;
+  top: 58%;
+  left: 3%;
 }
 .wxName{
   position: absolute;
-  top: 300rpx;
-  left: 240rpx;
+  top: 70%;
+  left: 31%;
   color: white;
   font-size: 16px;
 }
 .news{
   position: absolute;
   font-size: 13px;
-  top: 370rpx;
-  left: 240rpx;
+  top: 87%;
+  left: 31%;
   color: rgb(86, 147, 149);
 }
 .chatList{

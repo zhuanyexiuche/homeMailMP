@@ -32,7 +32,6 @@ Page({
           that.setData({
             chatList: res.data
           });
-          console.log(res);
         },
         fail: function (reason) {
           console.log(reason);
@@ -62,7 +61,6 @@ Page({
     })
   },
   onLoad: function () {
-    this.getQuestion();
     var that = this;
     wx.getUserInfo({
       success: function (res) {

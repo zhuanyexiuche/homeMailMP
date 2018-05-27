@@ -115,12 +115,12 @@ page{
   right: 100rpx;
 }
 .chatItemTitle{
-  font-size: larger;
+  font-size: 17px;
   padding:30rpx 40rpx;
 }
 .preview{
   font-size: 12px;
-  margin: 30rpx;
+  margin: 6%;
   color: darkgray
 }
 .answer{

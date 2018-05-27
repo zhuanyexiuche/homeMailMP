@@ -4,6 +4,7 @@
 
 .back{
   position: absolute;
+  margin: 10rpx;
 }
 
 .treeHoleList{
@@ -20,7 +21,7 @@
 }
 
 .item{
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0.3em;
   border: solid 1px gainsboro;
   margin: 30rpx 20rpx;
@@ -29,4 +30,45 @@
 }
 .item_first {
   margin-top: 10rpx;
+}
+
+.item{
+  height: 350rpx;
+  border-radius:20rpx;
+  box-shadow: 1rpx 1rpx 1rpx 0 gainsboro
+}
+
+.head{
+  width: 710rpx;
+  height: 120rpx;
+  background-color: rgb(167, 227, 220);
+}
+.user{
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 10em;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.name{
+  position: absolute;
+  top: 11%;
+  left: 25%;
+  font-size: 16px;
+}
+.mood{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  font-size: 14px;
+}
+
+.chatItemText{
+  margin-top: 20%;
+  margin-left: 5%;
+}
+.answer{
+  margin-top:20%;
+  margin-left: 65%
 }

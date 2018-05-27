@@ -1,16 +1,21 @@
 <!--pages/treeHole/treeHole.wxml-->
     <view>
+      <text style='position: absolute; top:3%;left:5%'>最近发布的秘密</text>
       <image src='../../resource/images/head.png' mode='widthFix'></image>
-       <image src='../../resource/images/secretBack.png' class='back' mode='widthFix'></image> 
+        <!-- <image src='../../resource/images/secretBack.png' class='back' mode='widthFix'></image>   -->
     </view>
     <view class='treeHoleList'>
       <block wx:for="{{treeHoleList}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.ID}}">
         <navigator id = "{{item.ID}}" url = "../secret/secret?color={{index%2}}" class = "item {{index==0?'item_first':''}}">
+        <view class='head'>
+          <image src="../../resource/images/niming1.jpg" class="user"></image>
+          <text class='name'>随机名字</text>
+          <text class='mood'>#随机心情#</text> 
+        </view>
           <view class = "chatItemText">
             <text>{{item.briefContext}}</text>
-            <view class='line' style='margin: -20rpx 40rpx 0'></view>
             <image src='../../resource/images/wechatHL.png' class='answer'></image>
-            <text>{{item.respCount}}</text>
+            <text style='margin-top:19%'>{{item.respCount}}</text>
           </view>
         </navigator>
       </block>

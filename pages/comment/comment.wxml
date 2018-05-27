@@ -3,7 +3,7 @@
     <view class='head'>
       <image src="../../resource/images/niming1.jpg" class = "user"></image>
       <text class='name'>随机名字</text>
-       <text class='mind'>#随机心情#</text> 
+       <text class='mood'>随机心情</text> 
     </view>
     <textarea id = "text" placeholder='{{defaultText}}...' class="comment" auto-height='true' maxlength='{{maxWord}}' bindinput='textInput' bindfocus='textFocus' bindblur='textBlur'></textarea>
     <view class ="restWord">还可以输入{{restWord}}字</view>

@@ -22,7 +22,7 @@ page{
 .top{
   margin: 40rpx;
   margin-top: 100rpx;
-  width: 700rpx;
+  width: 680rpx;
 }
 .mainContent{
   background-color: white;
@@ -43,7 +43,7 @@ page{
   left: 30%;
   font-size: 16px;
 }
-.mind{
+.mood{
   position: absolute;
   top: 16%;
   left: 30%;

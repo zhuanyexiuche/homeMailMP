@@ -7,7 +7,8 @@
     "pages/fullResponse/fullResponse",
     "pages/comment/comment",
     "pages/question/question",
-    "pages/secret/secret"
+    "pages/secret/secret",
+    "pages/answer/answer"
   ],
   "window": {
     "backgroundTextStyle": "dark",

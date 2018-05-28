@@ -20,7 +20,7 @@
   font-family:Courier New, Courier, monospace;
 }
 .chatTopicContext{
-  font-size:14px;
+  font-size:13px;
   white-space: pre-wrap;
   font-family:Courier New, Courier, monospace;
   padding-top:10rpx;
@@ -102,8 +102,8 @@
 }
 
 .underline{
-  background-color:rgba(128,128,128,0.5);
-  height:3rpx;
+  background-color: gainsboro;
+  height:2rpx;
   margin: 15rpx;
 }
 .answer{

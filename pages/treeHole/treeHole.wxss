@@ -69,6 +69,5 @@
   margin-left: 5%;
 }
 .answer{
-  margin-top:20%;
-  margin-left: 65%
+  margin: 0;
 }

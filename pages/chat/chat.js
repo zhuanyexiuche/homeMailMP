@@ -162,7 +162,7 @@ Page({
     //   });
     // },800);
     wx.navigateTo({
-      url: '../comment/comment'
+      url: '../answer/answer'
     })
   },
 

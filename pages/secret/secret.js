@@ -9,7 +9,6 @@ Page({
     secretID:null,
     secret:null,
     comment:null,
-    color:null,
   },
   refresh:function(succ){
     this.setData({
@@ -52,12 +51,8 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function () {
     this.refresh();
-    console.log(options);
-    this.setData({
-      color:options.color
-    });
   },
 
   /**

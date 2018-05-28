@@ -1,0 +1,10 @@
+@import '../question/question.wxss';
+@import '../comment/comment.wxss';
+
+.name{
+  position: absolute;
+  top: 13%;
+  left: 30%;
+  font-size: 15px;
+  color: whitesmoke;
+}

@@ -20,7 +20,6 @@ Page({
     wx.createSelectorQuery().select('#search').fields({
       properties: ['value']
     }, function (res) {
-      console.log(res.value);
       wx.request({
         url: app.globalData.serverUrl + '/readQuestion',
         data: {
@@ -93,7 +92,6 @@ Page({
     wx.createSelectorQuery().select('#search').fields({
       properties: ['value']
     }, function (res) {
-      console.log(res.value);
       wx.request({
         url: app.globalData.serverUrl+'/readQuestion',
         data:{

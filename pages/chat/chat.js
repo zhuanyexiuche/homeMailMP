@@ -16,7 +16,6 @@ Page({
     needToFold:false,
     folded:true,
     showContext:null,
-    color:null
   },
   refresh:function(success){
     let that = this;
@@ -32,7 +31,6 @@ Page({
         let temp = res.data.context;
         try{
           let a = res.data.context.length;
-
         }catch(e){
           console.error(res);
         }
@@ -64,9 +62,9 @@ Page({
         QID: app.globalData.chatID
       },
       success: function (res) {
-        console.log(res.data);
         that.setData({
-          respInfo: res.data/*.map(function(curVal){
+          respInfo: res.data
+          /*.map(function(curVal){
             let temp = curVal;
             temp.briefContent = temp.briefContent.replace("\\n","\n\r");
             return temp;
@@ -88,10 +86,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      chatID:app.globalData.chatID,
-      color:options.color
-    });
     this.refresh();
     this.data.folded=true;
   },

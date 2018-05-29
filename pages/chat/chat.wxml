@@ -1,9 +1,10 @@
 <!--pages/chat/chat.wxml-->
-<text style='position: absolute; top:3%;left:5%'>XXX的提问</text>
+<text style='position: absolute; top:3%;left:5%'>{{chatInfo.owner}} 的提问</text>
 <image src='../../resource/images/head.png' mode='widthFix' style='width:100%'></image>
 <view class = "chatList">
   <view class='questionArea'>
     <view id = "Topic" class = "chatTopic">{{chatInfo.topic}}</view>
+    <view class="owner">来自 <image src='{{chatInfo.ownerAvater}}' class='image'></image></view>
     <view class  = 'line'></view>
     <view id = "TopicContext" class = "chatTopic chatTopicContext">{{folded&&needToFold?foldedContext:context}}</view>
     <view class = "folder chatTopic {{needToFold?'':'hide'}}" bindtap = "folder">....</view>

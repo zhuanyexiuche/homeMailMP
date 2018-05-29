@@ -6,7 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    confirmText:"提交",
     maxWord :512,
     restWord : 512,
     focus:false,
@@ -18,7 +17,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
     if (options.defaultText){
       this.setData({
         defaultText:options.defaultText,
@@ -82,7 +80,6 @@ Page({
     wx.createSelectorQuery().select('#text').fields({
       properties:['value']
     },function(res){
-      console.log(res.value);
       if(res.value==""){
         wx.showModal({
           title: '秘密内容不可以为空',
@@ -91,7 +88,6 @@ Page({
         });
         return;
       }
-      console.log(app.globalData.userInfo);
       if(that.data.secret){
         //发表秘密
         wx.request({

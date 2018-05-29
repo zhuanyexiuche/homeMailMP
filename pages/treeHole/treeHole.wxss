@@ -22,20 +22,15 @@
 
 .item{
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 0.3em;
+  border-radius:20rpx;
   border: solid 1px gainsboro;
   margin: 30rpx 20rpx;
   height:auto;
   font-family:Courier New, Courier, monospace;
+  box-shadow: 1rpx 1rpx 1rpx 0 gainsboro
 }
 .item_first {
   margin-top: 10rpx;
-}
-
-.item{
-  height: 350rpx;
-  border-radius:20rpx;
-  box-shadow: 1rpx 1rpx 1rpx 0 gainsboro
 }
 
 .head{
